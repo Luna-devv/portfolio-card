@@ -1,13 +1,13 @@
 {
     "meta": {
-        "og:description": "Describe your website",
-        "og:title": "Title",
-        "og:type": "Title",
-        "og:site_name": "Title",
-        "og:image": "Title",
-        "og:url": "Title",
-        "theme-color": "Title",
-        "browser-title": "Flamex",
+        "og:description": "Hello, my name is Flamex. I'm a german fullstack developer",
+        "og:title": "Flamex",
+        "og:type": "website",
+        "og:site_name": "Flamex | Fullstack developer",
+        "og:image": "https://avatars.githubusercontent.com/u/68353308?v=4",
+        "og:url": "https://flamex.dev",
+        "theme-color": "#f07171",
+        "browser-title": "Flamex | Fullstack developer",
         "favicon": "https://avatars.githubusercontent.com/u/68353308?v=4"
     },
     "customization": {
@@ -15,19 +15,14 @@
         "image": "https://avatars.githubusercontent.com/u/68353308?v=4",
         "title": "Flamex",
         "subtitle": "Fullstack developer",
+        "aboutme": "Hello, my name is <b>Flamex</b> 👋<br>I'm a german fullstack developer and my hobbies are swimming, programming, playing video games and much more. I started developing website about 1 year ago. In this time I gained experience with <b>HTML</b>, <b>CSS</b>, <b>JS</b>, <b>Node.js</b>, <b>React</b>, <b>Express.js</b>, <b>Tailwind</b>.<br>For example  <a href=\"https://github.com/flamexdev/website-template\" class=\"cursor-pointer transition duration-200 hover:text-blue-500 text-blue-300\">this website</a> is made with React, Tailwind and ❤️<br><br>Below you can see some of my current and past projects",
         "header": {
             "name": "Flamex",
             "image": "https://avatars.githubusercontent.com/u/68353308?v=4",
             "links": [
                 {
-                    "url": "/",
-                    "title": "Home"
-                }, {
-                    "url": "/discord",
+                    "url": "https://discord.gg/dscbots",
                     "title": "Discord"
-                }, {
-                    "url": "/aboutme",
-                    "title": "About Me"
                 }
             ]
         },
@@ -37,7 +32,23 @@
                 "image": "https://www.discord-botlist.eu/pics/logo.jpg",
                 "description": "discord-botlist.eu - your Discord Bot List! We give you the availability to apply your bot and give your bot a page on our website.",
                 "url": "https://discord-botlist.eu"
+            }, {
+                "name": "savediscord.com",
+                "image": "data:image/png;base64,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",
+                "description": "A initiative by discord-botlist.eu - Discord is threatened with a takeover by tech giants like Microsoft. (deprecated)",
+                "url": "https://savediscord.com"
+            }, {
+                "name": "dsleu.org",
+                "image": "https://dsleu.org/logo_t.png",
+                "description": "Just a simple tool to view some statistics about your discord server and share them with others online. Give it a try :)",
+                "url": "https://dsleu.org"
             }
-        ]
+        ],
+        "socials": {
+            "discord": "https://discord.gg/dscbots",
+            "github": "https://github.com/flamexdev",
+            "twitch": "https://twitch.tv/flamexdev",
+            "email": "contact@flamex.dev"
+        }
     }
 }
