@@ -1,0 +1,29 @@
+{
+    "meta": {
+        "title": "Some Meta Title",
+        "og:description": "Describe your website",
+        "og:title": "Title",
+        "og:type": "Title",
+        "og:site_name": "Title",
+        "og:image": "Title",
+        "og:url": "Title",
+        "theme-color": "Title"
+    },
+    "customization": {
+        "name": "Flamex",
+        "image": "https://avatars.githubusercontent.com/u/68353308?v=4",
+        "title": "Flamex",
+        "subtitle": "Fullstack developer",
+        "header": {
+            "links": [
+                {
+                    "url": "/discord",
+                    "title": "Discord"
+                }, {
+                    "url": "/aboutme",
+                    "title": "About Me"
+                }
+            ]
+        }
+    }
+}
