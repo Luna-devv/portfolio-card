@@ -1,13 +1,14 @@
 {
     "meta": {
-        "title": "Some Meta Title",
         "og:description": "Describe your website",
         "og:title": "Title",
         "og:type": "Title",
         "og:site_name": "Title",
         "og:image": "Title",
         "og:url": "Title",
-        "theme-color": "Title"
+        "theme-color": "Title",
+        "browser-title": "Flamex",
+        "favicon": "https://avatars.githubusercontent.com/u/68353308?v=4"
     },
     "customization": {
         "name": "Flamex",
@@ -19,6 +20,9 @@
             "image": "https://avatars.githubusercontent.com/u/68353308?v=4",
             "links": [
                 {
+                    "url": "/",
+                    "title": "Home"
+                }, {
                     "url": "/discord",
                     "title": "Discord"
                 }, {
@@ -26,6 +30,14 @@
                     "title": "About Me"
                 }
             ]
-        }
+        },
+        "cards": [
+            {
+                "name": "discord-botlist.eu",
+                "image": "https://www.discord-botlist.eu/pics/logo.jpg",
+                "description": "discord-botlist.eu - your Discord Bot List! We give you the availability to apply your bot and give your bot a page on our website.",
+                "url": "https://discord-botlist.eu"
+            }
+        ]
     }
 }

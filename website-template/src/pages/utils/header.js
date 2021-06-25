@@ -19,7 +19,7 @@ class Homepage extends React.Component {
                     <img src={config.customization.header.image} className="w-10 mr-5 rounded-md" /> <span className="font-bold">{config.customization.header.name}</span>
                 </div>
                 <div className="">
-                    {config.customization.header.links.map(e => <Link link={e} />)}
+                    {config.customization.header.links.reverse().map(e => <Link link={e} />)}
                 </div>
             </header>
         )
