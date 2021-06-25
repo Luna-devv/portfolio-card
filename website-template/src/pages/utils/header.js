@@ -16,7 +16,7 @@ class Homepage extends React.Component {
         return (
             <header className="m-0 w-screen bg-gray-900 px-10 py-4 shadow-lg">
                 <div className="flex items-center">
-                    <img src={config.customization.image} className="w-10 mr-5 rounded-md" /> <span className="font-bold">{config.customization.name}</span>
+                    <img src={config.customization.header.image} className="w-10 mr-5 rounded-md" /> <span className="font-bold">{config.customization.header.name}</span>
                 </div>
                 <div className="">
                     {config.customization.header.links.map(e => <Link link={e} />)}
