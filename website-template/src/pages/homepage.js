@@ -5,7 +5,7 @@ import './utils/main.css'
 class Card extends React.Component {
     render() {
         return (
-            <div class="hover:rotate-2 transform bg-gray-100 cursor-pointer transition duration-200 ease rounded-lg bg-gray-900 hover:shadow-xl p-5 content-around" onClick={() => window.location.href = this.props.data.url}>
+            <div class="hover:rotate-2 transform bg-gray-100 cursor-pointer transition duration-300 ease rounded-lg bg-gray-900 hover:shadow-xl p-5 content-around" onClick={() => window.location.href = this.props.data.url}>
                 <div class="flex">
                     <img alt="" src={this.props.data.image} class="rounded-full w-10 h-10" /><span class="font-bold ml-3 mt-2">{this.props.data.name}</span>
                 </div>
