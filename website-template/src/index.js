@@ -12,18 +12,20 @@ import config from './config.json'
 // PAGES
 import Hompage from './pages/homepage'
 import Header from './pages/utils/header'
+import Footer from './pages/utils/footer'
 
 ReactDOM.render(
   <Router>
+    {/* <DocumentMeta meta={config.meta} /> */}
     <Helmet>
       <title>{config.meta['browser-title']}</title>
       <link rel="shortcut icon" type="image/x-icon" href={config.meta.favicon} />
     </Helmet>
     <Header />
-    {/* <DocumentMeta meta={config.meta} /> */}
     <Switch>
       <Route exact path="/" component={Hompage} />
     </Switch>
+    <Footer />
   </Router>,
   document.getElementById('root')
 )

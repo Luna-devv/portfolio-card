@@ -11,7 +11,7 @@ class Link extends React.Component {
     }
 }
 
-class Homepage extends React.Component {
+class Header extends React.Component {
     render() {
         return (
             <header className="m-0 w-screen bg-gray-900 px-10 py-4 shadow-lg">
@@ -26,4 +26,4 @@ class Homepage extends React.Component {
     }
 }
 
-export default Homepage
+export default Header
