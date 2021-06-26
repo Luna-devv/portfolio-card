@@ -8,5 +8,5 @@ Of course you can choose the hard way, editing the source, too.
 # I have an issue
 See [here](https://github.com/flamexdev/website-template/issues/new)
 
-# Copyright
+# Credits
 (c) 2021 [Flamex](mailto:contact@flamex.dev)
