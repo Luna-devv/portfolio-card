@@ -7,7 +7,7 @@ class Card extends React.Component {
         return (
             <div class="bg-gray-100 cursor-pointer transition duration-200 ease rounded-lg bg-gray-900 hover:shadow-xl p-5 content-around" onClick={() => window.location.href = this.props.data.url}>
                 <div class="flex">
-                    <img src={this.props.data.image} class="rounded-full w-10 h-10" /><span class="font-bold ml-3 mt-2">{this.props.data.name}</span>
+                    <img alt="" src={this.props.data.image} class="rounded-full w-10 h-10" /><span class="font-bold ml-3 mt-2">{this.props.data.name}</span>
                 </div>
                 <p class="text-gray-400 mt-2">
                     {this.props.data.description}
@@ -26,7 +26,7 @@ class Homepage extends React.Component {
             <div>
                 <div className="md:px-40 md:py-20 px-4 py-5">
                     <div className="flex items-center">
-                        <img src={config.customization.image} className="w-40 rounded-lg mr-10" />
+                        <img alt="" src={config.customization.image} className="w-40 rounded-lg mr-10" />
                         <div>
                             <h1 className="text-3xl font-bold mb-3">{config.customization.title}</h1>
                             <p className="text-sm font-bold text-gray-500">{config.customization.subtitle}</p>

@@ -10,7 +10,7 @@ import {ReactComponent as Email} from '../../assets/email.svg'
 class Footer extends React.Component {
     render() {
         return (
-            <footer className="sticky bottom-0 left-0 w-screen text-center py-3 bg-gray-900">
+            <footer className="w-screen text-center py-3 bg-gray-900">
                 {JSON.stringify(config.customization.socials) !== "{}" ? <div className="text-left md:ml-12 ml-5 text-gray-500">Follow me on</div> : <></>}
                 <div className="flex items-center md:px-10 px-3">
                     {config.customization.socials.discord ? <Discord onClick={() => window.location.href = config.customization.socials.discord} className="w-10 h-10 p-2 hover:bg-blue-900 cursor-pointer transition duration-100 ease rounded-md" /> : <></>}

@@ -8,17 +8,16 @@
         "og:url": "https://flamex.dev",
         "theme-color": "#f07171",
         "browser-title": "Flamex | Fullstack developer",
-        "favicon": "https://avatars.githubusercontent.com/u/68353308?v=4"
+        "favicon": "https://cdn.discordapp.com/attachments/774774383918186526/858284104646262794/tenor.gif"
     },
     "customization": {
-        "name": "Flamex",
         "image": "https://avatars.githubusercontent.com/u/68353308?v=4",
         "title": "Flamex",
         "subtitle": "Fullstack developer",
         "aboutme": "Hello, my name is <b>Flamex</b> 👋<br>I'm a german fullstack developer and my hobbies are swimming, programming, playing video games and much more. I started developing website about 1 year ago. In this time I gained experience with <b>HTML</b>, <b>CSS</b>, <b>JS</b>, <b>Node.js</b>, <b>React</b>, <b>Express.js</b> and <b>Tailwind</b>.<br>For example  <a href=\"https://github.com/flamexdev/website-template\" class=\"cursor-pointer transition duration-200 hover:text-blue-500 text-blue-300\">this website</a> is made with React, Tailwind and ❤️<br><br>Below you can see some of my current and past projects",
         "header": {
             "name": "Flamex",
-            "image": "https://avatars.githubusercontent.com/u/68353308?v=4",
+            "image": "https://cdn.discordapp.com/attachments/774774383918186526/858284104646262794/tenor.gif",
             "links": [
                 {
                     "url": "https://discord.gg/dscbots",
