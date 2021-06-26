@@ -33,12 +33,10 @@ class Homepage extends React.Component {
                         </div>
                     </div>
 
-                    {config.customization.aboutme ? <>
-                        <div className="pt-20">
-                            <p className="font-bold underline">About me</p>
-                            <p className="text-gray-400 md:w-2/3" dangerouslySetInnerHTML={{__html: config.customization.aboutme}} />
-                        </div>
-                    </> : <></>}
+                    <div className="pt-20">
+                        <p className="font-bold underline">About me</p>
+                        <p className="text-gray-400 md:w-2/3" dangerouslySetInnerHTML={{__html: config.customization.aboutme}} />
+                    </div>
 
                     <div id="list" className="pt-20">
                         {config.customization.cards.map(e => <Card data={e} />)}
