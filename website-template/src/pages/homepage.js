@@ -5,9 +5,9 @@ import './utils/main.css'
 class Card extends React.Component {
     render() {
         return (
-            <div class="hover:rotate-2 transform bg-gray-100 cursor-pointer transition duration-300 ease rounded-lg bg-gray-900 hover:shadow-xl p-5 content-around" onClick={() => window.location.href = this.props.data.url}>
-                <div class="flex">
-                    <img alt="" src={this.props.data.image} class="rounded-full w-10 h-10" /><span class="font-bold ml-3 mt-2">{this.props.data.name}</span>
+            <div class="min-h-full hover:rotate-2 transform bg-gray-100 cursor-pointer transition duration-300 ease rounded-lg bg-gray-900 hover:shadow-xl p-5 content-around" onClick={() => window.location.href = this.props.data.url}>
+                <div class="flex items-center">
+                    <img alt="" src={this.props.data.image} class="rounded-full w-10 h-10" /><span class="font-bold ml-3">{this.props.data.name}</span>
                 </div>
                 <p class="text-gray-400 mt-2">
                     {this.props.data.description}
@@ -21,10 +21,17 @@ class Card extends React.Component {
 }
 
 class Homepage extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            spotify: null
+        }
+    }
+
     render() {
         return (
             <div>
-                <div className="md:px-40 md:py-20 px-4 py-5">
+                <div className="md:px-40 md:py-10 px-4 pb-2">
                     <div className="flex items-center">
                         <img alt="" src={config.customization.image} className="w-40 rounded-lg mr-10" />
                         <div>
@@ -38,7 +45,7 @@ class Homepage extends React.Component {
                         <p className="text-gray-400 md:w-2/3" dangerouslySetInnerHTML={{__html: config.customization.aboutme}} />
                     </div>
 
-                    <div id="list" className="pt-20">
+                    <div id="list" className="pt-20 pb-4">
                         {config.customization.cards.map(e => <Card data={e} />)}
                     </div>
                 </div>
