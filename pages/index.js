@@ -46,7 +46,7 @@ export default class Homepage extends React.Component {
               Welcome, my name is <b>Flamex</b> 👋<br />
               Glad to see you here!<br /><br />
               
-              I'm a german fullstack developer and student. In my 2 years of programming experience I learned how to use and work with <b>JavaScript</b>, <b>NodeJS</b>, <b>HTML</b>, <b>CSS</b>, <b>React / JSX</b> and <b>TailwindCSS</b>.<br />
+              I am a german fullstack developer and student. In my 2 years of programming experience I learned how to use and work with <b>JavaScript</b>, <b>NodeJS</b>, <b>HTML</b>, <b>CSS</b>, <b>React / JSX</b> and <b>TailwindCSS</b>.<br />
               Below you can find some of my projects that are made by me or where I am involved right now.
             </p>
           </div>
