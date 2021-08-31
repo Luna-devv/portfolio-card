@@ -12,14 +12,14 @@ const cards = [
 class Card extends React.Component {
   render() {
     return (
-      <div class="min-h-full hover:rotate-2 transform bg-gray-100 cursor-pointer transition duration-300 ease rounded-lg bg-gray-900 hover:shadow-xl p-5 content-around" onClick={() => window.location.href = this.props.data.url}>
-        <div class="flex items-center">
-          <img alt="" src={this.props.data.image} class="rounded-full w-10 h-10" /><span class="font-bold ml-3">{this.props.data.name}</span>
+      <div className="min-h-full hover:rotate-2 transform bg-gray-100 cursor-pointer transition duration-300 ease rounded-lg bg-gray-900 hover:shadow-xl p-5 content-around" onClick={() => window.location.href = this.props.data.url}>
+        <div className="flex items-center">
+          <img alt="" src={this.props.data.image} className="rounded-full w-10 h-10" /><span className="font-bold ml-3">{this.props.data.name}</span>
         </div>
-        <p class="text-gray-400 mt-2">
+        <p className="text-gray-400 mt-2">
           {this.props.data.description}
         </p>
-        <p class="text-blue-300 mt-2">
+        <p className="text-blue-300 mt-2">
           {this.props.data.url.split("https://").join(" ").split("http://").join(" ")}
         </p>
       </div>
