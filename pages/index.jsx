@@ -90,7 +90,7 @@ export default class Homepage extends React.Component {
         {/* Right */}
         <div className="text-gray-400 lg:pt-48 pt-2 md:w-2/3 w-screen lg:px-0 px-5 bg-background pb-5">
           <b>Howdy</b> 🤠<br />
-          I'm Flamex, just a common german guy that loves programming. I started to implement into projects about 2 years ago. In this time, I gained experience and knowledge with
+          Im&apos;m Flamex, just a common german guy that loves programming. I started to implement into projects about 2 years ago. In this time, I gained experience and knowledge with
           <p className="flex items-center mt-1">
             <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" className="w-6 mr-2" alt="could not load image"/> HTML
           </p>
@@ -121,7 +121,7 @@ export default class Homepage extends React.Component {
           <p className="flex items-center mt-1 mb-3">
             <img src="https://authy.com/wp-content/uploads/npm-logo.png" className="w-6 mr-2" alt="could not load image"/> npm
           </p>
-          Unfortunately, I don't have any projects to proof it, but <a href="https://github.com/flamexdev/flamex.dev" className="underline transition duration-75 ease-in-out hover:text-blue-200">this website</a> is built with Next.js and TailwindCSS. I've planned to make more projects to expand my list of repositories on my <a href="https://github.com/flamexdev" className="underline transition duration-75 ease-in-out hover:text-blue-200">GitHub</a> profile.
+          Unfortunately, I donm&apos;t have any projects to proof it, but <a href="https://github.com/flamexdev/flamex.dev" className="underline transition duration-75 ease-in-out hover:text-blue-200">this website</a> is built with Next.js and TailwindCSS. Im&apos;ve planned to make more projects to expand my list of repositories on my <a href="https://github.com/flamexdev" className="underline transition duration-75 ease-in-out hover:text-blue-200">GitHub</a> profile.
         </div>
       </div>
     )
