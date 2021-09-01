@@ -16,6 +16,10 @@ export default function render({ Component, pageProps }) {
         <meta property="og:image" content="https://avatars.githubusercontent.com/u/68353308?v=4" />
         <meta property="og:url" content="https://flamex.dev" />
         <meta name="theme-color" content="#f07171" />
+        <title>
+          Flamex - A human on earth
+        </title>
+        <link rel="shortcut icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/68353308?v=4" />
       </Head>
       <Component {...pageProps} />
     </>
