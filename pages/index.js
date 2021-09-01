@@ -36,7 +36,7 @@ export default class Homepage extends React.Component {
             <img alt="" src="pfp_old.png" className="w-40 rounded-lg mr-10" />
             <div>
                 <h1 className="text-3xl font-bold mb-3">Flamex</h1>
-                <p className="text-sm font-bold text-gray-500">Fullstack developer, german student, "human"</p>
+                <p className="text-sm font-bold text-gray-500">Fullstack developer, german student, human on earth</p>
             </div>
           </div>
 
