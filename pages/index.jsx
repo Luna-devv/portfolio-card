@@ -90,7 +90,7 @@ export default class Homepage extends React.Component {
         {/* Right */}
         <div className="text-gray-400 lg:pt-48 pt-2 md:w-2/3 w-screen lg:px-0 px-5 bg-background pb-5">
           <b>Howdy</b> 🤠<br />
-          I'm Flamex, just a common german guy that loves programming. I started to implement into projects about 2 years ago. In this time, I gained experience and knowledge with
+          I'm Flamex, just a common german guy that loves programming. I started to implement bugs into projects about 2 years ago. In this time, I gained experience and knowledge with
           <p className="flex items-center mt-1">
             <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png" className="w-6 mr-2" alt="could not load image"/> HTML
           </p>
