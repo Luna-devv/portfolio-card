@@ -1,21 +1,49 @@
-#list {
-  display: grid;
-  margin: auto;
-  grid-template-columns: repeat(auto-fit, 320px);
-  align-items: center;
-  grid-gap: 50px;
-  justify-content: left;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+html {
+  font-family: 'Lato', sans-serif;
+  background: rgb(31, 15, 51);
+  background: linear-gradient(170deg, rgb(24, 11, 39) 0%, rgb(7, 3, 12) 60%, rgba(0,0,0,1) 100%);
+  position: relative;
+  min-height: 100%;
+  overflow-x: hidden;
+  color: rgb(221, 217, 230);
+  margin: 0rem;
 }
 
-body::-webkit-scrollbar {
-  width: 0.5em;
+a {
+  all: unset;
 }
 
-body::-webkit-scrollbar-track {
-  background-color: transparent;
+.link {
+  font-family: 'Open Sans', sans-serif;
+  color: #912c7a;
+  cursor: pointer;
+  transition-duration: 300ms;
 }
 
-body::-webkit-scrollbar-thumb {
-  background-color: #99aab5;
-  border-radius: 5px;
+.link:hover {
+  color: #b3298e;
+}
+
+
+
+/* Card */
+
+.main {
+  background-color: #1D1D1D;
+  padding: 1rem;
+  border: 0.2rem #912c7a solid;
+  border-radius: 0.6rem;
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner {
+  padding-right: 16rem;
+  padding-left: 16rem;
 }
