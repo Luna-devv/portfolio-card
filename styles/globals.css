@@ -10,6 +10,7 @@ html {
   overflow-x: hidden;
   color: rgb(221, 217, 230);
   margin: 0rem;
+  user-select: none;
 }
 
 a {
@@ -33,7 +34,6 @@ a {
 
 .main {
   background-color: #1D1D1D;
-  padding: 1rem;
   border: 0.2rem #912c7a solid;
   border-radius: 0.6rem;
   position: absolute;
@@ -41,9 +41,67 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 
 .banner {
-  padding-right: 16rem;
-  padding-left: 16rem;
+    width: 42rem
+}
+
+.picture {
+    position: absolute;
+    z-index: 1;
+    left: 1rem;
+    top: 17rem;
+    height: 8rem;
+    border-radius: 1rem;
+    border: 0.2
+}
+
+.name {
+    position: absolute;
+    z-index: 1;
+    left: 9.4rem;
+    top: 21.8rem;
+    font-size: 2rem;
+}
+
+.name > .nah {
+    font-size: 1.2rem;
+}
+
+.box {
+    padding-top: 1rem!important;
+    position: relative;
+    z-index: 1;
+    left: 0rem;
+    top: 3.2rem;
+    padding: 0.7rem;
+    padding-bottom: 4rem!important;
+    font-size: 1.4rem;
+    background-color: #1D1D1D;
+}
+
+.title {
+    font-size: 1.7rem;
+    color:  rgba(239, 183, 253, 0.6);
+}
+
+.description {
+    font-size: 1.1rem;
+    color:  rgba(251, 235, 255, 0.8);
+    user-select:text;
+}
+
+.nah {
+    font-size: 1.1rem;
+    color:  rgba(219, 188, 226, 0.5);
+}
+
+.ico {
+    width: 1.2rem;
+    position: relative;
+    top: 0.23rem;
+    margin-left: 0.2rem;
+    margin-right: 0.08rem;
 }
