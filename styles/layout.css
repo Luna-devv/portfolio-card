@@ -1,0 +1,45 @@
+header {
+    user-select: none;
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin: -0.5rem;
+    padding: 0.16rem;
+}
+
+ul {
+    list-style-type: none;
+    display: flex
+}
+
+li {
+    position: relative;
+    right: 1.1rem;
+    margin-right: 1rem;
+}
+
+.header-ico {
+    position: relative;
+    top: 0.192rem;
+    right: 0.25rem;
+    padding-right: 0.1rem;
+    padding-left: 0.1rem;
+}
+
+.header-button {
+    cursor: pointer;
+    background-color: rgba(174, 133, 187, 0.2);
+    padding: 0.5rem;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    border-radius: 0.4rem;
+    font-family: 'Open Sans', sans-serif;
+    transition-duration: 400ms;
+    color: #f0f0f0
+}
+
+.header-button:hover {
+    transform: scale(1.06);
+    background-color: rgba(174, 133, 187, 0.1);
+}
