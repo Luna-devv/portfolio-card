@@ -70,16 +70,27 @@ a {
     font-size: 1.2rem;
 }
 
-.box {
-    padding-top: 1rem!important;
+.content {
     position: relative;
     z-index: 1;
     left: 0rem;
-    top: 3.2rem;
-    padding: 0.7rem;
+    top: 2.22rem;
+    padding: 1rem;
     padding-bottom: 4rem!important;
     font-size: 1.4rem;
-    background-color: #1D1D1D;
+}
+
+.errorPage {
+    top: -0.9rem;
+    padding-bottom: 0rem!important;
+    font-size: 1.4rem;
+}
+
+.box {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: rgba(65, 42, 71, 0.4);
+    border-radius: 0.6rem;
 }
 
 .title {
