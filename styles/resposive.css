@@ -1,0 +1,20 @@
+@media screen and (max-width: 600px) {
+    .banner {
+        width: 24rem;
+    }
+    
+    .main {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        background-color: #1D1D1D;
+        border: 0.2rem #912c7a solid;
+        border-radius: 0.6rem;
+    }
+
+    .picture {
+        top: 7.6rem;  
+    }
+
+    .name {
+        top: 12.6rem;
+    }
+}

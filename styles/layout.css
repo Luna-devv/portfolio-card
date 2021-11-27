@@ -4,8 +4,8 @@ header {
     z-index: 999;
     top: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    margin: -0.5rem;
-    padding: 0.16rem;
+    padding: 0.08rem;
+    overflow-x: hidden;
 }
 
 ul {
@@ -30,9 +30,9 @@ li {
 .header-button {
     cursor: pointer;
     background-color: rgba(174, 133, 187, 0.2);
-    padding: 0.5rem;
-    padding-right: 0.8rem;
-    padding-left: 0.8rem;
+    padding: 0.4rem;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
     border-radius: 0.4rem;
     font-family: 'Open Sans', sans-serif;
     transition-duration: 400ms;
