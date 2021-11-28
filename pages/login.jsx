@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import config from '../config.json';
 
 export default function Login({ }) {
     useEffect(() => {
@@ -6,7 +7,7 @@ export default function Login({ }) {
 
         const data = new FormData();
         data.append('client_id', '857230367350063104');
-        data.append('client_secret', 'j5L3A8l62r7BpHa8t7Fh0q_EDSua6Ldy');
+        data.append('client_secret', config.client_secret);
         data.append('grant_type', 'authorization_code');
         data.append('redirect_uri', 'http://10.0.0.43:3000/login');
         data.append('scope', 'identify');
