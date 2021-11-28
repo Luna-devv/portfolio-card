@@ -1,9 +1,10 @@
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .banner {
         width: 24rem;
     }
     
     .main {
+        margin-top: 31rem !important;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         background-color: #1D1D1D;
         border: 0.2rem #912c7a solid;
@@ -16,5 +17,14 @@
 
     .name {
         top: 12.6rem;
+    }
+
+    .site-box {
+        max-height: 7.1rem;
+    }
+
+    .header-user {
+        display: absolute;
+        visibility: hidden;
     }
 }
