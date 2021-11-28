@@ -4,8 +4,8 @@ export default function Layout({ children }) {
     const [user, setUser] = useState({})
 
     useEffect(() => {
-        setUser(JSON.parse(localStorage.getItem("user")))
-    }, [])
+        setUser(JSON.parse(localStorage.getItem("user")));
+    }, []);
 
     return (
       <>

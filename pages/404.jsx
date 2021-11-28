@@ -4,12 +4,12 @@ export default class Error404 extends React.Component {
     render() {
         return (
             <>
-                <div className='main'>
-                    <div className='content errorPage'>
+                <div className='error-main'>
+                    <div className='error-content'>
                         <div className='box'>
                             <text className='title'>404</text> <br />
                             <text className='description'>
-                                The requrested site cannot be found <br />
+                                The requested site cannot be found <br />
                             </text>
                         </div>
                     </div>
