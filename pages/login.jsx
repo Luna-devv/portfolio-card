@@ -24,8 +24,9 @@ export default function Login({ }) {
                 res.auth = info.access_token;
                 return res;
             });
-        }).then(data => {
-            localStorage.setItem('user', JSON.stringify(data));
+        }).then(async data => {
+            await localStorage.removeItem('storageUser');
+            if (data?.id && data?.username) localStorage.setItem('storageUser', JSON.stringify({auth: data.auth}));
             window.location.href = '/';
         });
     }, []);

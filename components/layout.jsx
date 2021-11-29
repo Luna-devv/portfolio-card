@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from 'react';
 
 export default function Layout({ children }) {
-    const [user, setUser] = useState({})
+    let [storageUser, setUser] = useState({});
 
-    useEffect(() => {
-        setUser(JSON.parse(localStorage.getItem("user")));
+    useEffect( async () => {
+        await setUser(JSON.parse(localStorage.getItem("storageUser")));
+        if (!storageUser) return;
+        console.log(storageUser)
+        await fetch('https://discordapp.com/api/users/@me', {
+            headers: {
+                authorization: `Bearer ${storageUser.auth}`
+            }
+        }).then(res => res.json()).then(res => {
+            setUser(res);
+        });
     }, []);
 
     return (
@@ -30,8 +39,8 @@ export default function Layout({ children }) {
                     </a>
                 </li>
                 <li>
-                    <a className='header-button header-user' href={user?.username ? '/logout' : '/login'}>
-                        {user?.username || `Login`}
+                    <a className='header-button header-user' href={storageUser?.username ? '/logout' : '/login'}>
+                        {storageUser?.username || `Login`}
                     </a>
                 </li>
             </ul>
