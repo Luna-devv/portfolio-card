@@ -4,15 +4,23 @@
 html {
     font-family: 'Lato', sans-serif;
     background: #0b0510;
-    /* background: linear-gradient(170deg, rgb(24, 11, 39) 0%, rgb(7, 3, 12) 60%);
-    background-size: cover;
-    background-repeat: no-repeat; */
     position: relative;
     min-height: 100%;
     overflow-x: hidden;
     color: rgb(221, 217, 230);
     margin: 0rem;
     user-select: none;
+}
+
+.footer {
+    background-color: #0B0510;
+    font-size: .8rem;
+    color: #a9aec0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
 }
 
 body {
@@ -49,8 +57,12 @@ a {
 
 /* Card */
 
+body {
+    padding-bottom: 10rem;
+}
+
 .main {
-    margin-top: 38rem !important;
+    margin-top: 34rem !important;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #1D1D1D;
     border: 0.2rem #912c7a solid;
@@ -80,17 +92,16 @@ a {
 .picture {
     position: absolute;
     left: 1rem;
-    top: 17rem;
+    top: 12rem;
     height: 8rem;
     border-radius: 1rem;
-    border: 0.2;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
 
 .name {
     position: absolute;
-    left: 9.4rem;
-    top: 22rem;
+    left: 10rem;
+    top: 17.2rem;
     font-size: 2rem;
 }
 
@@ -101,7 +112,7 @@ a {
 .content {
     position: relative;
     left: 0rem;
-    top: 2.22rem;
+    top: 2.62rem;
     padding: 1rem;
     padding-bottom: 4rem !important;
     font-size: 1.4rem;

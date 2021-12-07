@@ -26,7 +26,7 @@ export default function Login({ }) {
             });
         }).then(async data => {
             await localStorage.removeItem('storageUser');
-            if (data?.id && data?.username) localStorage.setItem('storageUser', JSON.stringify({auth: data.auth}));
+            // if (data?.id && data?.username) localStorage.setItem('storageUser', JSON.stringify({auth: data.auth}));
             window.location.href = '/';
         });
     }, []);

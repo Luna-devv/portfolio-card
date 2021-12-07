@@ -12,11 +12,15 @@
     }
 
     .picture {
-        top: 7.6rem;  
+        top: 6rem;  
     }
 
     .name {
-        top: 12.6rem;
+        top: 10.2rem;
+    }
+
+    .content {
+        top: 3.8rem;
     }
 
     .site-box {

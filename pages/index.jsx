@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import config from '../config.json'
 
 import {
     HomeIcon,
@@ -28,15 +29,15 @@ const cards = [{
     url: 'https://dasu.gifts'
 }];
 
-export default class Homepage extends React.Component {
-
-    render() {
-        return (
-            <>
-                <div className='main'>
-                <img className='banner' src='https://cdn.xyna.space/r/f701e98771f5e36b068a92c8a8961e8e.gif' alt='banner' draggable='false'/>
-                <img className='picture' src='https://cdn.xyna.space/r/mee.jpg' alt='profile picture' draggable='false'/>
-                <text className='name'> Luna <t className='nah'>she/her</t> <br /></text>
+function Homepage({ content }) {
+    return (
+        <>
+            <div className='main'>
+                <img className='banner' src={content?.banner} alt='banner' draggable='false' />
+                <div className='picture' style={{ backgroundColor: content?.accentColor, padding: 3 }}>
+                    <img src={content?.avatar} alt='profile picture' draggable='false' style={{ width: `8rem`, borderRadius: `0.8rem` }} />
+                </div>
+                <text className='name'> {content?.username.replace(`♡`, ``) || `Luna`} <t className='nah'>she/her</t> <br /></text>
 
                 <div className='content'>
                     <div className='box'>
@@ -49,26 +50,27 @@ export default class Homepage extends React.Component {
                             <HeartIcon className='ico' /> Lesbian and LGBTQ+ Activist <br />
                         </text>
                     </div>
-                    
+
                     {cards.map((card) => (
-                    <div className='site-box'>
-                        <text className='title'>{card.name}</text> <br />
-                        <text className='description'>
-                            <NewspaperIcon className='ico' /> {card.description} <br />
-                            <LinkIcon className='ico' /> <a className='link' href={card.url}>{card.url?.replace(`https://`, ``)?.replace(`http://`, ``)}</a> <br />
-                        </text>
-                        <img className='site-picture' src={card.icon} draggable='false'/>
-                    </div>
+                        <div className='site-box'>
+                            <text className='title'>{card.name}</text> <br />
+                            <text className='description'>
+                                <NewspaperIcon className='ico' /> {card.description} <br />
+                                <LinkIcon className='ico' /> <a className='link' href={card.url}>{card.url?.replace(`https://`, ``)?.replace(`http://`, ``)}</a> <br />
+                            </text>
+                            <img className='site-picture' src={card.icon} draggable='false' />
+                        </div>
                     ))}
 
                 </div>
             </div>
-            </>
-        );
-    };
+        </>
+    )
 };
 
-async function getData() {
-    const data = await fetch(`https://api.lanyard.rest/v1/users/821472922140803112`);
-    return data;
+Homepage.getInitialProps = async () => { 
+    const luna = await fetch(config.api + `/luna`).then(res => res.json());
+    return luna;
 };
+
+export default Homepage;
