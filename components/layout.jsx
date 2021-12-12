@@ -2,20 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function Layout({ children }) {
-    let [storageUser, setUser] = useState({});
-
-    useEffect(async () => {
-        await setUser(JSON.parse(localStorage.getItem("storageUser")));
-        if (!storageUser) return;
-        console.log(storageUser)
-        await fetch('https://discordapp.com/api/users/@me', {
-            headers: {
-                authorization: `Bearer ${storageUser.auth}`
-            }
-        }).then(res => res.json()).then(res => {
-            setUser(res);
-        });
-    }, []);
 
     return (
         <>
@@ -45,11 +31,6 @@ export default function Layout({ children }) {
                             </a>
                         </Link>
                     </li>
-                    {/* <li>
-                        <a className='header-button header-user' href={storageUser?.username ? '/logout' : '/login'}>
-                            {storageUser?.username || `Login`}
-                        </a>
-                    </li> */}
                 </ul>
             </header>
             <main>{children}</main>
