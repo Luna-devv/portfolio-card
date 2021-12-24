@@ -3,6 +3,8 @@ import '../styles/layout.css';
 import '../styles/resposive.css';
 import Layout from '../components/layout';
 import Head from 'next/head';
+import { AiFillHeart } from "react-icons/ai"
+import Link from 'next/link';
 
 export default function render({ Component, pageProps }) {
     return (
@@ -22,11 +24,15 @@ export default function render({ Component, pageProps }) {
                 </title>
                 <link rel='shortcut icon' type='image/x-icon' href='https://avatars.githubusercontent.com/u/71079641?v=4' />
             </Head>
-            <Layout>
-                <body>
-                    <Component {...pageProps} />
-                </body>
-            </Layout>
+            <Layout />
+            <div className='set-luna'>
+                <Link className='luna' href='https://waya.one/go/luna'>
+                    <a>Made with&nbsp;<AiFillHeart style={{ position: 'relative', top: 3 }} />&nbsp;by&nbsp;Luna</a>
+                </Link>
+            </div>
+            <body>
+                <Component {...pageProps} />
+            </body>
         </>
     );
 };

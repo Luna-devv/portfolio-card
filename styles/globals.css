@@ -176,3 +176,17 @@ body {
     border-radius: 0.6rem;
     max-height: 5.7rem;
 }
+
+.set-luna {
+  overflow-x: hidden;
+  font-size: 0.9rem;
+  color: #a9aec0;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  cursor: pointer;
+}
+
+.luna {
+    display: flex;
+}
