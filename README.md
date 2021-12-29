@@ -1,7 +1,5 @@
+## Basics
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
 First, run the development server:
 
 ```bash
@@ -10,25 +8,58 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Internal API
+The best way to use this website is using an internal-API.
+You can set the API url in the [`config.json`](https://github.com/Luna-devv/luna-site/blob/main/config.json#L2) and the URL path in the [`pages/index.jsx`](https://github.com/Luna-devv/luna-site/blob/main/pages/index.jsx#L96).
+Here is an example on how the response data of your API should look like: 
+```json
+{
+    "status": 200,
+    "message": "OK",
+    "content": {
+        "id": "821472922140803112",
+        "username": "Lunish",
+        "discriminator": "8888",
+        "nickname": "Luna",
+        "status": {
+            "state": {
+                "text": "idle",
+                "color": "#FEE75C"
+            },
+            "emote": "https://cdn.discordapp.com/emojis/806899941200363582.png?size=2048",
+            "text": "bla bla bla"
+        },
+        "activities": [
+            {
+                "applicationId": "463097721130188830",
+                "name": "YouTube",
+                "url": null,
+                "details": "06 Sportfreunde Stiller - Es Muss Was Wunderbares Sein Von Mir Geliebt Zu Werden",
+                "state": "Listening to a playlist",
+                "createdTimestamp": 1640811066009,
+                "timestamps": {
+                    "start": null,
+                    "end": 1640811170000
+                },
+                "assets": {
+                    "large": {
+                        "text": "PreMiD  v2.2.0 • Ext v2.2.3",
+                        "image": "https://cdn.discordapp.com/app-assets/463097721130188830/513734690272968717.png"
+                    },
+                    "small": {
+                        "text": "Playing",
+                        "image": "https://cdn.discordapp.com/app-assets/463097721130188830/493061639994867714.png"
+                    }
+                }
+            }
+        ],
+        "createdTimestamp": 1615924806867,
+        "avatar": "https://cdn.discordapp.com/avatars/821472922140803112/22c9e9cbae3d9a7dffeb398c65b19582.png?size=1024",
+        "banner": "https://cdn.discordapp.com/banners/821472922140803112/d5e6e489192492b43660a6a09359fd53.png?size=600",
+        "accentColor": "#e5acbb"
+    }
+}
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Help
+If you need help don't hesitate to [join our discord](https://waya.one/go/discord) and ask for help.
