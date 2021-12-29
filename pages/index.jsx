@@ -1,6 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import config from '../config.json'
+import config from '../config.json';
 
 import {
     HomeIcon,
@@ -9,7 +8,9 @@ import {
     HeartIcon,
     LockClosedIcon,
     NewspaperIcon,
-    LinkIcon
+    LinkIcon,
+    CubeIcon,
+    ChipIcon
 } from '@heroicons/react/outline'
 
 const cards = [{
@@ -33,13 +34,19 @@ function Homepage({ content }) {
     return (
         <>
             <div className='main'>
-                <img className='banner' src={content?.banner} alt='banner' draggable='false' />
-                <div className='picture' style={{ backgroundColor: content?.accentColor, padding: 3 }}>
-                    <img src={content?.avatar} alt='profile picture' draggable='false' style={{ width: `8rem`, borderRadius: `0.8rem` }} />
-                </div>
-                <text className='name'> {content?.username.replace(`♡`, ``) || `Luna`} <t className='nah'>she/her</t> <br /></text>
+                <img className='banner' src={content.banner} alt='banner' draggable='false' />
 
-                <div className='content'>
+                <div className='profile'>
+                    <div className='picture' style={{ backgroundColor: content.status.state.color, padding: 3, top: (content.status.emote || content.status.text) ? 202 : 190 }}>
+                        <img src={content.avatar} alt='profile picture' draggable='false' style={{ width: 128, borderRadius: 14 }} />
+                    </div>
+                    {(content.status.emote || content.status.text) ? <div style={{ position: 'absolute', left: 160, top: 268 }}>
+                        <t style={{ fontSize: 34 }}> {content.nickname} <br /></t>
+                        <img src={content.status.emote} style={{ height: 24, borderRadius: 3 }} /> <t style={{ position: 'relative', bottom: 4.6, fontSize: 20, color: '#ABA8B3' }}>{content.status.text}</t>
+                    </div> : <t style={{ position: 'absolute', left: 160, top: 271, fontSize: 42 }}> {content.nickname} <br /></t>}
+                </div>
+                    
+                <div className='content' style={{ top: (content.status.emote || content.status.text) ? 50 : 40 }}>
                     <div className='box'>
                         <text className='title'>about me</text> <br />
                         <text className='description'>
@@ -51,16 +58,33 @@ function Homepage({ content }) {
                         </text>
                     </div>
 
-                    {cards.map((card) => (
+                    <div style={content.activities.length > 0 ? { marginTop: 32 } : {}}>
+                        {content.activities?.map((activitie) => (
+                        <div className='act-box'>
+                            <img className='act-picture' src={activitie.assets.large.image} draggable='false' />
+                            <div>
+                                <text className='title'>{activitie.name}</text> <br />
+                                <text className='description'>
+                                    <CubeIcon className='ico' /> {activitie.details} <br />
+                                    <ChipIcon className='ico' /> {activitie.state} <br />
+                                </text>
+                            </div>
+                        </div>
+                        ))}
+                    </div>
+
+                    <div style={cards.length > 0 ? { marginTop: 32 } : {}}>
+                        {cards.map((card) => (
                         <div className='site-box'>
                             <text className='title'>{card.name}</text> <br />
                             <text className='description'>
                                 <NewspaperIcon className='ico' /> {card.description} <br />
-                                <LinkIcon className='ico' /> <a className='link' href={card.url}>{card.url?.replace(`https://`, ``)?.replace(`http://`, ``)}</a> <br />
+                                <LinkIcon className='ico' /> <a className='link' href={card.url}>{card.url.replace(`https://`, ``).replace(`http://`, ``)}</a> <br />
                             </text>
                             <img className='site-picture' src={card.icon} draggable='false' />
                         </div>
                     ))}
+                    </div>
 
                 </div>
             </div>

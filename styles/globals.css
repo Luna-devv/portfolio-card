@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 html {
     font-family: 'Lato', sans-serif;
@@ -62,7 +63,7 @@ body {
 }
 
 .main {
-    margin-top: 34rem !important;
+    margin-top: 38rem !important;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #1D1D1D;
     border: 0.2rem #912c7a solid;
@@ -74,10 +75,6 @@ body {
 }
 
 .error-main {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: #1D1D1D;
-    border: 0.2rem #912c7a solid;
-    border-radius: 0.6rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -92,21 +89,9 @@ body {
 .picture {
     position: absolute;
     left: 1rem;
-    top: 12rem;
     height: 8rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
-}
-
-.name {
-    position: absolute;
-    left: 10rem;
-    top: 17.2rem;
-    font-size: 2rem;
-}
-
-.name>.nah {
-    font-size: 1.2rem;
 }
 
 .content {
@@ -118,13 +103,8 @@ body {
     font-size: 1.4rem;
 }
 
-.error-content {
-    position: relative;
-    left: 0rem;
-    top: -0.9rem;
-    padding: 1rem;
-    padding-bottom: 0rem !important;
-    font-size: 1.4rem;
+.code {
+    font-family: 'Roboto Mono', monospace;
 }
 
 .box {
@@ -145,17 +125,38 @@ body {
     user-select: text;
 }
 
-.nah {
-    font-size: 1.1rem;
-    color: rgba(219, 188, 226, 0.5);
-}
-
 .ico {
     width: 1.2rem;
     position: relative;
     top: 0.23rem;
     margin-left: 0.2rem;
     margin-right: 0.08rem;
+}
+
+.act-box {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: rgba(65, 42, 71, 0.4);
+    border-radius: 0.6rem;
+    max-height: 5.7rem;
+    display: flex;
+}
+
+.act-picture {
+    height: 5.6rem;
+    border-radius: 0.4rem;
+    border: 0.2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+    background-color: rgb(8, 8, 8);
+    margin-right: 0.6rem;
+}
+
+.site-box {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background-color: rgba(65, 42, 71, 0.4);
+    border-radius: 0.6rem;
+    max-height: 5.7rem;
 }
 
 .site-picture {
@@ -169,22 +170,14 @@ body {
     background-color: rgb(8, 8, 8);
 }
 
-.site-box {
-    margin-top: 1rem;
-    padding: 0.8rem;
-    background-color: rgba(65, 42, 71, 0.4);
-    border-radius: 0.6rem;
-    max-height: 5.7rem;
-}
-
 .set-luna {
-  overflow-x: hidden;
-  font-size: 0.9rem;
-  color: #a9aec0;
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  cursor: pointer;
+    overflow-x: hidden;
+    font-size: 0.9rem;
+    color: #a9aec0;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    cursor: pointer;
 }
 
 .luna {

@@ -1,6 +1,6 @@
 .header {
     user-select: none;
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 999;
     background-color: rgba(0, 0, 0, 0.4);
@@ -42,13 +42,4 @@ li {
 .header-button:hover {
     transform: scale(1.06);
     background-color: rgba(174, 133, 187, 0.1);
-}
-
-.header-user {
-    position: fixed;
-    right: 1rem;
-    top: 0.86rem;
-    padding: 0.4rem;
-    padding-right: 0.6rem;
-    padding-left: 0.6rem;
 }
