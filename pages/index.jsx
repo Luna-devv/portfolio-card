@@ -38,7 +38,7 @@ function Homepage({ content }) {
 
                 <div className='profile'>
                     <div className='picture' style={{ backgroundColor: content.status.state.color, padding: 3, top: (content.status.emote || content.status.text) ? 202 : 190 }}>
-                        <img src={content.avatar} alt='profile picture' draggable='false' style={{ width: 128, borderRadius: 14 }} />
+                        <img src={content.nickavatar || content.avatar} alt='profile picture' draggable='false' style={{ width: 128, borderRadius: 14 }} />
                     </div>
                     {(content.status.emote || content.status.text) ? <div style={{ position: 'absolute', left: 160, top: 268 }}>
                         <t style={{ fontSize: 34 }}> {content.nickname} <br /></t>
