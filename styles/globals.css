@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 html {
-    font-family: 'Lato', sans-serif;
-    background: #0b0510;
+    font-family: 'Noto Sans',
+        sans-serif;
+    background: #0B0510;
     position: relative;
     min-height: 100%;
     overflow-x: hidden;
@@ -16,7 +17,7 @@ html {
 .footer {
     background-color: #0B0510;
     font-size: .8rem;
-    color: #a9aec0;
+    color: #723c70;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -55,121 +56,6 @@ a {
     background-color: rgba(40, 20, 46, 1);
 }
 
-
-/* Card */
-
-body {
-    padding-bottom: 10rem;
-}
-
-.main {
-    margin-top: 38rem !important;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: #1D1D1D;
-    border: 0.2rem #912c7a solid;
-    border-radius: 0.6rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-}
-
-.error-main {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-}
-
-.banner {
-    width: 42rem;
-}
-
-.picture {
-    position: absolute;
-    left: 1rem;
-    height: 8rem;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
-}
-
-.content {
-    position: relative;
-    left: 0rem;
-    top: 2.62rem;
-    padding: 1rem;
-    padding-bottom: 4rem !important;
-    font-size: 1.4rem;
-}
-
-.code {
-    font-family: 'Roboto Mono', monospace;
-}
-
-.box {
-    margin-top: 1rem;
-    padding: 0.8rem;
-    background-color: rgba(65, 42, 71, 0.4);
-    border-radius: 0.6rem;
-}
-
-.title {
-    font-size: 1.7rem;
-    color: rgba(239, 183, 253, 0.6);
-}
-
-.description {
-    font-size: 1.1rem;
-    color: rgba(251, 235, 255, 0.8);
-    user-select: text;
-}
-
-.ico {
-    width: 1.2rem;
-    position: relative;
-    top: 0.23rem;
-    margin-left: 0.2rem;
-    margin-right: 0.08rem;
-}
-
-.act-box {
-    margin-top: 1rem;
-    padding: 0.8rem;
-    background-color: rgba(65, 42, 71, 0.4);
-    border-radius: 0.6rem;
-    max-height: 5.7rem;
-    display: flex;
-}
-
-.act-picture {
-    height: 5.6rem;
-    border-radius: 0.4rem;
-    border: 0.2;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
-    background-color: rgb(8, 8, 8);
-    margin-right: 0.6rem;
-}
-
-.site-box {
-    margin-top: 1rem;
-    padding: 0.8rem;
-    background-color: rgba(65, 42, 71, 0.4);
-    border-radius: 0.6rem;
-    max-height: 5.7rem;
-}
-
-.site-picture {
-    position: relative;
-    bottom: 6.6rem;
-    left: 35.6rem;
-    height: 4rem;
-    border-radius: 1rem;
-    border: 0.2;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
-    background-color: rgb(8, 8, 8);
-}
-
 .set-luna {
     overflow-x: hidden;
     font-size: 0.9rem;
@@ -182,4 +68,12 @@ body {
 
 .luna {
     display: flex;
+}
+
+@media screen and (max-width: 1000px) {
+    .set-luna {
+        transform: rotate(-90deg);
+        right: -3.6rem;
+        bottom: 5rem;
+    }
 }

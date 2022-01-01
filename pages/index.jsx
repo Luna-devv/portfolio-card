@@ -1,16 +1,18 @@
 import React from 'react';
 import config from '../config.json';
+import style from '../styles/Home.module.css';
+import Link from 'next/Link';
 
 import {
-    HomeIcon,
+    LockClosedIcon,
     CakeIcon,
+    HomeIcon,
     CodeIcon,
     HeartIcon,
-    LockClosedIcon,
-    NewspaperIcon,
-    LinkIcon,
     CubeIcon,
-    ChipIcon
+    CubeTransparentIcon,
+    NewspaperIcon,
+    PaperClipIcon
 } from '@heroicons/react/outline'
 
 const cards = [{
@@ -30,71 +32,68 @@ const cards = [{
     url: 'https://dasu.gifts'
 }];
 
-function Homepage({ content }) {
+export default function Home({ user }) {
     return (
-        <>
-            <div className='main'>
-                <img className='banner' src={content.banner} alt='banner' draggable='false' />
-
-                <div className='profile'>
-                    <div className='picture' style={{ backgroundColor: content.status.state.color, padding: 3, top: (content.status.emote || content.status.text) ? 202 : 190 }}>
-                        <img src={content.nickavatar || content.avatar} alt='profile picture' draggable='false' style={{ width: 128, borderRadius: 14 }} />
-                    </div>
-                    {(content.status.emote || content.status.text) ? <div style={{ position: 'absolute', left: 160, top: 268 }}>
-                        <t style={{ fontSize: 34 }}> {content.nickname} <br /></t>
-                        <img src={content.status.emote} style={{ height: 24, borderRadius: 3 }} /> <t style={{ position: 'relative', bottom: 4.6, fontSize: 20, color: '#ABA8B3' }}>{content.status.text}</t>
-                    </div> : <t style={{ position: 'absolute', left: 160, top: 271, fontSize: 42 }}> {content.nickname} <br /></t>}
+        <div className={style.user_container} style={{ border: `solid 0.2rem ${user.accentColor}`, borderTop: 1 }}>
+            <div>
+                <div style={{ backgroundColor: user.accentColor }}>
+                    <img src={user?.banner} height={300} style={{ borderRadius: 5, position: 'relative', top: 4 }} />
                 </div>
-                    
-                <div className='content' style={{ top: (content.status.emote || content.status.text) ? 50 : 40 }}>
-                    <div className='box'>
-                        <text className='title'>about me</text> <br />
-                        <text className='description'>
-                            <LockClosedIcon className='ico' /> Shy, cautious <br />
-                            <CakeIcon className='ico' /> 17th April, 2007 <br />
-                            <HomeIcon className='ico' /> Austria, near Vienna <br />
-                            <CodeIcon className='ico' /> Hobby Software Engineer <br />
-                            <HeartIcon className='ico' /> Lesbian and LGBTQ+ Activist <br />
-                        </text>
+                <div>
+                    <div className={style.picture} style={{ backgroundColor: user.status.state.color, padding: 4, top: (user.status.emote || user.status.text) ? 214 : 200 }}>
+                        <img src={user.nickavatar || user.avatar} alt='profile picture' draggable='false' style={{ width: 160, borderRadius: 12 }} />
                     </div>
+                    {(user.status.emote || user.status.text) ?
+                        <div style={{ position: 'absolute', left: 194, top: 298 }}>
+                            <t style={{ fontSize: 40 }}> {user.nickname} <br /></t>
+                            <img src={user.status.emote} style={{ height: 26, borderRadius: 3, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', backgroundColor: '#080808' }} /> <t style={{ position: 'relative', bottom: 4.6, fontSize: 24, color: '#ABA8B3' }}>{user.status.text}</t>
+                        </div>
+                        :
+                        <t style={{ position: 'absolute', left: 194, top: 305, fontSize: 46 }}> {user.nickname} <br /></t>
+                    }
+                </div>
 
-                    <div style={content.activities.length > 0 ? { marginTop: 32 } : {}}>
-                        {content.activities?.map((activitie) => (
-                        <div className='act-box'>
-                            <img className='act-picture' src={activitie.assets.large.image} draggable='false' />
-                            <div>
-                                <text className='title'>{activitie.name}</text> <br />
-                                <text className='description'>
-                                    <CubeIcon className='ico' /> {activitie.details} <br />
-                                    <ChipIcon className='ico' /> {activitie.state} <br />
-                                </text>
+                <div className={style.bio}>
+                    <LockClosedIcon height={24} style={{ position: 'relative', top: 6 }} /> Shy, cautious <br />
+                    <CakeIcon height={24} style={{ position: 'relative', top: 6 }} /> 17th April, 2007 <br />
+                    <HomeIcon height={24} style={{ position: 'relative', top: 6 }} /> Austria, near Vienna <br />
+                    <CodeIcon height={24} style={{ position: 'relative', top: 6 }} /> Hobby Software Engineer <br />
+                    <HeartIcon height={24} style={{ position: 'relative', top: 6 }} /> Lesbian and LGBTQ+ Activist <br />
+                </div>
+
+                <div style={user.activities.length > 0 ? { marginTop: 30 } : {}}>
+                    {user.activities?.map((activitie) => (
+                        <div className={style.activitie}>
+                            <img src={activitie.assets.large.image} style={{ borderRadius: 8, height: 100, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', backgroundColor: '#080808' }} />
+                            <div style={{ marginTop: 2, marginLeft: 10 }}>
+                                <name style={{ fontSize: 26, color: '#987C9F' }}>{activitie.name}</name> <br />
+                                <CubeIcon height={24} style={{ position: 'relative', top: 6 }} /> {activitie.state} <br />
+                                <CubeTransparentIcon height={24} style={{ position: 'relative', top: 6 }} /> {activitie.details}
                             </div>
                         </div>
-                        ))}
-                    </div>
+                    ))}
+                </div>
 
-                    <div style={cards.length > 0 ? { marginTop: 32 } : {}}>
-                        {cards.map((card) => (
-                        <div className='site-box'>
-                            <text className='title'>{card.name}</text> <br />
-                            <text className='description'>
-                                <NewspaperIcon className='ico' /> {card.description} <br />
-                                <LinkIcon className='ico' /> <a className='link' href={card.url}>{card.url.replace(`https://`, ``).replace(`http://`, ``)}</a> <br />
-                            </text>
-                            <img className='site-picture' src={card.icon} draggable='false' />
+                <div style={cards.length > 0 ? { marginTop: 30 } : {}}>
+                    {cards?.map((card) => (
+                        <div className={style.sites}>
+                            <div style={{ marginTop: 2, marginLeft: 10 }}>
+                                <name style={{ fontSize: 26, color: '#987C9F' }}>{card.name}</name> <br />
+                                <NewspaperIcon height={24} style={{ position: 'relative', top: 6 }} /> {card.description} <br />
+                                <PaperClipIcon height={24} style={{ position: 'relative', top: 6 }} /> <Link href={card.url}><a className='link'>{card.url?.replace(`https://`, ``)?.replaceAll(`http://`, ``)}</a></Link>
+                            </div> <br />
+                            <img src={card.icon} style={{ borderRadius: 16, height: 90, position: 'relative', bottom: 126, left: 626, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', backgroundColor: '#080808' }} />
                         </div>
                     ))}
-                    </div>
-
                 </div>
+
             </div>
-        </>
+        </div>
     )
 };
 
-Homepage.getInitialProps = async () => { 
+Home.getInitialProps = async () => {
     const luna = await fetch(config.api + `/luna`).then(res => res.json());
-    return luna;
+    console.log(luna.content)
+    return { user: luna.content };
 };
-
-export default Homepage;

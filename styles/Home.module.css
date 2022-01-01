@@ -1,0 +1,51 @@
+.user_container {
+    position: relative;
+    z-index: 1;
+    width: 46.8rem;
+    margin: auto;
+    background-color: #1D1D1D;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    min-height: 40rem;
+}
+
+.picture {
+    position: absolute;
+    left: 1rem;
+    height: 10rem;
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+}
+
+.bio {
+    margin: 1rem;
+    margin-top: 6rem;
+    background-color: rgba(65, 42, 71, 0.4);
+    padding: 0.5rem;
+    padding-left: 0.6rem;
+    padding-bottom: 0.7rem;
+    border-radius: 0.4rem;
+}
+
+.activitie {
+    margin: 1rem;
+    background-color: rgba(65, 42, 71, 0.4);
+    padding: 0.5rem;
+    padding-left: 0.6rem;
+    padding-bottom: 0.7rem;
+    border-radius: 0.4rem;
+    display: flex;
+    max-height: 6rem;
+}
+
+.sites {
+    margin: 1rem;
+    background-color: rgba(65, 42, 71, 0.4);
+    padding: 0.5rem;
+    padding-left: 0.6rem;
+    padding-bottom: 0.7rem;
+    border-radius: 0.4rem;
+    max-height: 6rem;
+}

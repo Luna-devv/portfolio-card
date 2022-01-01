@@ -1,6 +1,5 @@
 import '../styles/globals.css';
 import '../styles/layout.css';
-import '../styles/resposive.css';
 import Layout from '../components/layout';
 import Head from 'next/head';
 import { AiFillHeart } from "react-icons/ai"
