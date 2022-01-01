@@ -11,7 +11,7 @@ export default function render({ Component, pageProps }) {
             <Head>
                 <meta charSet='utf-8' />
                 <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-                <script async src='https://arc.io/widget.min.js#sqvWfDKJ'></script>
+//                 <script async src="https://arc.io/widget.min.js#sqvWfDKJ"></script>
                 <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
                 <meta property='og:description' content="Heyia, I'm Luna and I was born 14 years ago and live in Austria." />
                 <meta property='og:title' content='Luna - Software Engineer and LGBTQ+ Activist' />
