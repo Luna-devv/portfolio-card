@@ -21,6 +21,7 @@ Here is an example on how the response data of your API should look like:
         "username": "Lunish",
         "discriminator": "8888",
         "nickname": "Luna",
+        "nickavatar": "https://cdn.discordapp.com/guilds/923346903289184336/users/821472922140803112/avatars/f78efecce67311140d1cdcd67446768d.png?size=2048",
         "status": {
             "state": {
                 "text": "idle",
