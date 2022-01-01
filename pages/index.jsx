@@ -32,7 +32,7 @@ const cards = [{
     url: 'https://dasu.gifts'
 }];
 
-export default function Home({ user }) {
+export default function Homepage({ user }) {
     return (
         <div className={style.user_container} style={{ border: `solid 0.2rem ${user.accentColor}`, borderTop: 1 }}>
             <div>
@@ -92,7 +92,7 @@ export default function Home({ user }) {
     )
 };
 
-Home.getInitialProps = async () => {
+Homepage.getInitialProps = async () => {
     const luna = await fetch(config.api + `/luna`).then(res => res.json());
     console.log(luna.content)
     return { user: luna.content };
