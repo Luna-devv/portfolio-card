@@ -1,7 +1,7 @@
 import React from 'react';
 import config from '../config.json';
 import style from '../styles/Home.module.css';
-import Link from 'next/Link';
+import Link from 'next/link';
 
 import {
     LockClosedIcon,
@@ -37,7 +37,7 @@ export default function Home({ user }) {
         <div className={style.user_container} style={{ border: `solid 0.2rem ${user.accentColor}`, borderTop: 1 }}>
             <div>
                 <div style={{ backgroundColor: user.accentColor }}>
-                    <img src={user?.banner} height={300} style={{ borderRadius: 5, position: 'relative', top: 4 }} />
+                    <img src={user?.banner} className={style.banner} style={{ borderRadius: 5, position: 'relative', top: 4 }} />
                 </div>
                 <div>
                     <div className={style.picture} style={{ backgroundColor: user.status.state.color, padding: 4, top: (user.status.emote || user.status.text) ? 214 : 200 }}>
