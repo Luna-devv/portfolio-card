@@ -34,23 +34,23 @@ const cards = [{
 
 export default function Homepage({ user }) {
     return (
-        <div className={style.user_container} style={{ border: `solid 0.2rem ${user.accentColor}`, borderTop: 1 }}>
+        <div className={style.user_container} style={{ border: `solid 0.2rem ${user?.accentColor}`, borderTop: 1 }}>
             <div>
-                <div style={{ backgroundColor: user.accentColor }}>
+                <div style={{ backgroundColor: user?.accentColor }}>
                     <img src={user?.banner} className={style.banner} style={{ borderRadius: 5, position: 'relative', top: 4 }} />
                 </div>
                 <div>
-                    <div className={style.picture} style={{ backgroundColor: user.status.state.color, padding: 4, top: (user.status.emote || user.status.text) ? 214 : 200 }}>
-                        <img src={user.nickavatar || user.avatar} alt='profile picture' draggable='false' className={style.profilepicture} />
+                    <div className={style.picture} style={{ backgroundColor: user?.status.state.color, padding: 4, top: (user?.status.emote || user?.status.text) ? 214 : 200 }}>
+                        <img src={user?.nickavatar || user?.avatar} alt='profile picture' draggable='false' className={style.profilepicture} />
                     </div>
                     <div className={style.name_container}>
-                        {(user.status.emote || user.status.text) ?
+                        {(user?.status.emote || user?.status.text) ?
                             <div style={{ position: 'absolute', left: 194, top: 303 }}>
-                                <t style={{ fontSize: 40 }}> {user.nickname} <br /></t>
-                                <img src={user.status.emote} style={{ height: 26, borderRadius: 3, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', backgroundColor: '#080808' }} /> <t style={{ position: 'relative', bottom: 4.6, fontSize: 24, color: '#ABA8B3' }}>{user.status.text}</t>
+                                <t style={{ fontSize: 40 }}> {user?.nickname} <br /></t>
+                                <img src={user?.status.emote} style={{ height: 26, borderRadius: 3, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', backgroundColor: '#080808' }} /> <t style={{ position: 'relative', bottom: 4.6, fontSize: 24, color: '#ABA8B3' }}>{user?.status.text}</t>
                             </div>
                             :
-                            <t style={{ position: 'absolute', left: 194, top: 305, fontSize: 46 }}> {user.nickname} <br /></t>
+                            <t style={{ position: 'absolute', left: 194, top: 305, fontSize: 46 }}> {user?.nickname} <br /></t>
                         }
                     </div>
                 </div>
@@ -63,8 +63,8 @@ export default function Homepage({ user }) {
                     <HeartIcon height={26} style={{ position: 'relative', top: 6 }} /> Lesbian and LGBTQ+ Activist 🌈 <br />
                 </div>
 
-                <div style={user.activities.length > 0 ? { marginTop: 30 } : {}}>
-                    {user.activities?.map((activitie) => (
+                <div style={user?.activities.length > 0 ? { marginTop: 30 } : {}}>
+                    {user?.activities?.map((activitie) => (
                         <div className={style.activitie}>
                             <img src={activitie.assets.large.image} className={style.activitie_img} />
                             <div style={{ marginTop: 1, marginLeft: 10 }}>
