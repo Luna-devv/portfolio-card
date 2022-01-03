@@ -12,21 +12,7 @@
 }
 
 .banner {
-    height: 300px
-}
-
-@media screen and (max-width: 800px) {
-    .user_container {
-        width: 85vw;
-    }
-
-    .banner {
-        height: 36vw
-    }
-
-    .picture {
-        top: 3.6rem !important;
-    }
+    height: 18.64rem
 }
 
 .picture {
@@ -37,7 +23,13 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
 
+.profilepicture {
+    width: 10rem;
+    border-radius: 12px;
+}
+
 .bio {
+    font-size: 1.2rem;
     margin: 1rem;
     margin-top: 6rem;
     background-color: rgba(65, 42, 71, 0.4);
@@ -58,12 +50,69 @@
     max-height: 6rem;
 }
 
+.activitie_img {
+    border-radius: 8px;
+    height: 6rem;
+    position: relative;
+    top: 0.04rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #080808;
+}
+
+.activitie_name {
+    font-size: 2rem;
+    color: #987C9F;
+}
+
 .sites {
     margin: 1rem;
     background-color: rgba(65, 42, 71, 0.4);
     padding: 0.5rem;
-    padding-left: 0.6rem;
-    padding-bottom: 0.7rem;
     border-radius: 0.4rem;
-    max-height: 6rem;
+    max-height: 6.2rem;
+}
+
+@media screen and (max-width: 800px) {
+    .user_container {
+        width: 23rem;
+    }
+
+    .banner {
+        height: 9.15rem;
+        top: 0 !important;
+    }
+
+    .picture {
+        top: 6.4rem !important;
+        left: 0.5rem !important;
+        height: 7rem !important;
+    }
+
+    .profilepicture {
+        width: 7rem !important;
+    }
+
+    .name_container {
+        position: relative;
+        bottom: 19rem;
+        right: 3.6rem
+    }
+
+    .activitie {
+        font-size: 0.8rem;
+    }
+
+    .activitie_img {
+        height: 5rem;
+    }
+
+    .activitie_name {
+        font-size: 1.4rem;
+        color: #987C9F;
+    }
+
+    .sites {
+        max-height: 6.8rem;
+    }
+
 }

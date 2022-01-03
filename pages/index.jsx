@@ -41,32 +41,34 @@ export default function Homepage({ user }) {
                 </div>
                 <div>
                     <div className={style.picture} style={{ backgroundColor: user.status.state.color, padding: 4, top: (user.status.emote || user.status.text) ? 214 : 200 }}>
-                        <img src={user.nickavatar || user.avatar} alt='profile picture' draggable='false' style={{ width: 160, borderRadius: 12 }} />
+                        <img src={user.nickavatar || user.avatar} alt='profile picture' draggable='false' className={style.profilepicture} />
                     </div>
-                    {(user.status.emote || user.status.text) ?
-                        <div style={{ position: 'absolute', left: 194, top: 298 }}>
-                            <t style={{ fontSize: 40 }}> {user.nickname} <br /></t>
-                            <img src={user.status.emote} style={{ height: 26, borderRadius: 3, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', backgroundColor: '#080808' }} /> <t style={{ position: 'relative', bottom: 4.6, fontSize: 24, color: '#ABA8B3' }}>{user.status.text}</t>
-                        </div>
-                        :
-                        <t style={{ position: 'absolute', left: 194, top: 305, fontSize: 46 }}> {user.nickname} <br /></t>
-                    }
+                    <div className={style.name_container}>
+                        {(user.status.emote || user.status.text) ?
+                            <div style={{ position: 'absolute', left: 194, top: 303 }}>
+                                <t style={{ fontSize: 40 }}> {user.nickname} <br /></t>
+                                <img src={user.status.emote} style={{ height: 26, borderRadius: 3, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', backgroundColor: '#080808' }} /> <t style={{ position: 'relative', bottom: 4.6, fontSize: 24, color: '#ABA8B3' }}>{user.status.text}</t>
+                            </div>
+                            :
+                            <t style={{ position: 'absolute', left: 194, top: 305, fontSize: 46 }}> {user.nickname} <br /></t>
+                        }
+                    </div>
                 </div>
 
                 <div className={style.bio}>
-                    <LockClosedIcon height={24} style={{ position: 'relative', top: 6 }} /> Shy, cautious <br />
-                    <CakeIcon height={24} style={{ position: 'relative', top: 6 }} /> 17th April, 2007 <br />
-                    <HomeIcon height={24} style={{ position: 'relative', top: 6 }} /> Austria, near Vienna <br />
-                    <CodeIcon height={24} style={{ position: 'relative', top: 6 }} /> Hobby Software Engineer <br />
-                    <HeartIcon height={24} style={{ position: 'relative', top: 6 }} /> Lesbian and LGBTQ+ Activist <br />
+                    <LockClosedIcon height={26} style={{ position: 'relative', top: 6 }} /> Shy, cautious <br />
+                    <CakeIcon height={26} style={{ position: 'relative', top: 6 }} /> 17th April, 2007 <br />
+                    <HomeIcon height={26} style={{ position: 'relative', top: 6 }} /> Austria, near Vienna <br />
+                    <CodeIcon height={26} style={{ position: 'relative', top: 6 }} /> Hobby Software Engineer <br />
+                    <HeartIcon height={26} style={{ position: 'relative', top: 6 }} /> Lesbian and LGBTQ+ Activist 🌈 <br />
                 </div>
 
                 <div style={user.activities.length > 0 ? { marginTop: 30 } : {}}>
                     {user.activities?.map((activitie) => (
                         <div className={style.activitie}>
-                            <img src={activitie.assets.large.image} style={{ borderRadius: 8, height: 100, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', backgroundColor: '#080808' }} />
-                            <div style={{ marginTop: 2, marginLeft: 10 }}>
-                                <name style={{ fontSize: 26, color: '#987C9F' }}>{activitie.name}</name> <br />
+                            <img src={activitie.assets.large.image} className={style.activitie_img} />
+                            <div style={{ marginTop: 1, marginLeft: 10 }}>
+                                <name className={style.activitie_name} >{activitie.name}</name> <br />
                                 <CubeIcon height={24} style={{ position: 'relative', top: 6 }} /> {activitie.state} <br />
                                 <CubeTransparentIcon height={24} style={{ position: 'relative', top: 6 }} /> {activitie.details}
                             </div>

@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 html {
-    font-family: 'Noto Sans',
+    font-family: 'Ubuntu',
         sans-serif;
     background: #0B0510;
     position: relative;
@@ -12,17 +12,6 @@ html {
     color: rgb(221, 217, 230);
     margin: 0rem;
     user-select: none;
-}
-
-.footer {
-    background-color: #0B0510;
-    font-size: .8rem;
-    color: #723c70;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 30px;
-    width: 100%;
 }
 
 body {
