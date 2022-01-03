@@ -80,7 +80,7 @@ export default function Homepage({ user }) {
                             <div style={{ marginTop: 2, marginLeft: 10 }}>
                                 <name style={{ fontSize: 26, color: '#987C9F' }}>{card.name}</name> <br />
                                 <NewspaperIcon height={24} style={{ position: 'relative', top: 6 }} /> {card.description} <br />
-                                <PaperClipIcon height={24} style={{ position: 'relative', top: 6 }} /> <Link href={card.url}><a className='link'>{card.url?.replace(`https://`, ``)?.replaceAll(`http://`, ``)}</a></Link>
+                                <PaperClipIcon height={24} style={{ position: 'relative', top: 6 }} /> <Link href={card.url}><a className='link'>{card.url?.replace(`https://`, ``)?.replace(`http://`, ``)}</a></Link>
                             </div> <br />
                             <img src={card.icon} style={{ borderRadius: 16, height: 90, position: 'relative', bottom: 126, left: 626, boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', backgroundColor: '#080808' }} />
                         </div>
