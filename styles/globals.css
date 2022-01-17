@@ -5,7 +5,7 @@
 html {
     font-family: 'Ubuntu',
         sans-serif;
-    background: #0B0510;
+    background: #0f0714;
     position: relative;
     min-height: 100%;
     overflow-x: hidden;
@@ -43,6 +43,11 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(40, 20, 46, 1);
+}
+
+button {
+    outline: none;
+    border: none;
 }
 
 .set-luna {
