@@ -18,7 +18,7 @@ import {
 const cards = [{
     name: 'discord-botlist.eu',
     icon: 'https://cdn.discord-botlist.eu/pictures/logo.png',
-    description: 'We give you the ailability to apply and give your bot a page on our site.',
+    description: 'We give you the ability to apply and give your bot a page on our site.',
     url: 'https://discord-botlist.eu'
 }, {
     name: 'Tixte',
