@@ -8,9 +8,37 @@ npm run dev
 yarn dev
 ```
 
+## **NOT** using Internal API
+
+If you don't want to use an API to update your data, just go to the [`pages/index.jsx`](https://github.com/Luna-devv/luna-site/blob/57514801427a9ecc06c1a33b79966b4d16303ced/pages/index.jsx#L155) '`Homepage.getInitialProps`' and paste the following code there:
+```js
+Homepage.getInitialProps = async () => {
+    user.content = {
+        username: `Lunish`,
+        nickname: `Luna`,
+        avatar: `https://cdn.discordapp.com/avatars/821472922140803112/a_821f41012a430779fb354fa201a97529.gif?size=2048`,
+        nickavatar: `https://cdn.discordapp.com/guilds/923346903289184336/users/821472922140803112/avatars/15fb29ee64bd696c3a79bdfe56a8fa0e.png?size=2048`,
+        banner: `https://cdn.discordapp.com/banners/821472922140803112/a_476c6e1379984c9c6b39f3f2a6e12790.gif?size=600`,
+        status: {
+            state: {
+                text: `Unknown`,
+                color: `#747F8D`
+            },
+            emote: null,
+            text: null
+        },
+        activities: [],
+        accentColor: `b6334c`
+    };
+    error = true;
+
+    return { user: user?.content, error: error };
+}
+```
+
 ## Internal API
 The best way to use this website is using an internal-API.
-You can set the API url in the [`config.json`](https://github.com/Luna-devv/luna-site/blob/main/config.json#L2) and the URL path in the [`pages/index.jsx`](https://github.com/Luna-devv/luna-site/blob/main/pages/index.jsx#L96).
+You can set the API url in the [`config.json`](https://github.com/Luna-devv/luna-site/blob/main/config.json#L2) and the URL path in the [`pages/index.jsx`](https://github.com/Luna-devv/luna-site/blob/57514801427a9ecc06c1a33b79966b4d16303ced/pages/index.jsx#L155).
 Here is an example on how the response data of your API should look like: 
 ```json
 {
