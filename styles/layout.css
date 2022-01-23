@@ -3,20 +3,44 @@
     position: relative;
     top: 0;
     z-index: 999;
-    background-color: rgba(0, 0, 0, 0.4);
     padding: 0.08rem;
-    overflow-x: hidden;
+    overflow: hidden !important;
+    background: rgb(32, 26, 39);
+    background: linear-gradient(270deg, rgb(32, 28, 37) 0%, rgb(20, 17, 22) 80%);
+}
+
+@media screen and (max-width: 540px) {
+    .header {
+        display: none;
+    }
 }
 
 ul {
     list-style-type: none;
-    display: flex
+    display: flex;
+    margin: 0.7rem;
 }
 
 li {
     position: relative;
     right: 1.1rem;
     margin-right: 1rem;
+}
+
+.lunaSeemann {
+    margin-top: 0.27rem;
+    margin-left: 12px;
+    font-size: 29px;
+    transition-duration: 800ms;
+}
+
+.lunaSeemann:hover {
+    margin-top: 0.1rem;
+    letter-spacing: 0.15rem;
+    text-shadow: -1.5px 1.5px rgb(209, 56, 83),
+        -3px 3px rgb(209, 90, 151),
+        -4.5px 4.5px rgb(108, 67, 212),
+        -6px 6px rgb(55, 142, 212);
 }
 
 .header-ico {
@@ -29,18 +53,44 @@ li {
 
 .header-button {
     cursor: pointer;
-    background-color: rgba(174, 133, 187, 0.2);
-    padding: 0.2rem;
-    padding-bottom: 0.4rem;
-    padding-right: 0.7rem;
-    padding-left: 0.7rem;
-    border-radius: 0.3rem;
+    background-color: rgb(43, 36, 49);
+    padding: 0.43rem 0.8rem 0.43rem 0.8rem;
+    border-radius: 0.2rem;
     font-family: 'Open Sans', sans-serif;
-    transition-duration: 400ms;
-    color: #f0f0f0
+    transition-duration: 500ms;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    display: flex;
 }
 
 .header-button:hover {
-    transform: scale(1.06);
-    background-color: rgba(174, 133, 187, 0.1);
+    transform: scale(1.1);
+    background-color: rgb(50, 44, 56);
+}
+
+@media screen and (max-width: 700px) {
+    .header-button>div {
+        display: none
+    }
+
+    .header-ico {
+        margin: -0.05rem 0.0rem 0.4rem 0.5rem;
+    }
+}
+
+.position-button {
+    margin: 0;
+    position: absolute;
+    right: 0.2rem;
+    animation: laodin-buttons 2000ms;
+}
+
+@keyframes laodin-buttons {
+    from {
+        right: -20rem
+    }
+
+    to {
+        right: 0.2rem
+    }
 }

@@ -1,0 +1,30 @@
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    animation: fadein 2000ms;
+}
+
+@keyframes fadein {
+    from {
+        margin-top: 2rem;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0rem;
+        opacity: 1;
+    }
+}
+
+.container {
+    overflow-x: hidden !important;
+    margin-top: 13rem !important;
+    margin-bottom: 2rem !important;
+    background-color: rgb(30, 26, 34);
+    width: 32rem;
+    margin: 1rem;
+    padding: 1rem 2rem 1rem 2rem;
+    box-shadow: rgb(27, 24, 31, 0.6) 0px 4px 12px;
+}

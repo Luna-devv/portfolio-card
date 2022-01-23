@@ -1,118 +1,236 @@
-.user_container {
-    position: relative;
-    z-index: 1;
-    width: 46.8rem;
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
-    background-color: #1D1D1D;
-    margin-top: 2rem;
+    animation: fadein 2000ms;
+    overflow-x: hidden;
+}
+
+@keyframes fadein {
+    from {
+        margin-top: 2rem;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0rem;
+        opacity: 1;
+    }
+}
+
+.container {
+    overflow-x: hidden !important;
+    margin-top: 13rem;
     margin-bottom: 2rem;
-    border-radius: 0.4rem;
-    overflow: hidden;
-    min-height: 40rem;
+    background-color: rgb(30, 26, 34);
+    width: 49.4rem;
+    box-shadow: rgb(27, 24, 31, 0.6) 0px 4px 12px;
 }
 
 .banner {
-    height: 18.7rem
-}
-
-.picture {
+    width: 790px;
+    height: 316px;
+    border-radius: 0.2rem;
     position: absolute;
-    left: 1rem;
-    height: 10rem;
-    border-radius: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    z-index: 1;
 }
 
-.profilepicture {
-    width: 10rem;
-    border-radius: 12px;
+.on_banner {
+    position: absolute;
+    z-index: 2;
+    width: 790px;
+    height: 316px;
 }
 
-.bio {
-    font-size: 1.2rem;
-    margin: 1rem;
-    margin-top: 6rem;
-    background-color: rgba(65, 42, 71, 0.4);
-    padding: 0.5rem;
-    padding-left: 0.6rem;
-    padding-bottom: 0.7rem;
-    border-radius: 0.4rem;
-}
-
-.activitie {
-    margin: 1rem;
-    background-color: rgba(65, 42, 71, 0.4);
-    padding: 0.5rem;
-    padding-left: 0.6rem;
-    padding-bottom: 0.7rem;
-    border-radius: 0.4rem;
-    display: flex;
-    max-height: 6rem;
-}
-
-.activitie_img {
-    border-radius: 8px;
-    height: 6rem;
-    position: relative;
-    top: 0.04rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: #080808;
-}
-
-.activitie_name {
-    font-size: 2rem;
-    color: #987C9F;
-}
-
-.sites {
-    margin: 1rem;
-    background-color: rgba(65, 42, 71, 0.4);
-    padding: 0.5rem;
-    border-radius: 0.4rem;
-    max-height: 6.2rem;
-}
-
-@media screen and (max-width: 800px) {
-    .user_container {
-        width: 23rem;
+@media screen and (max-width: 840px) {
+    .container {
+        width: 90vw;
     }
 
     .banner {
-        height: 9.15rem;
-        top: 0 !important;
+        width: 90vw;
     }
 
-    .picture {
-        top: 6.4rem !important;
-        left: 0.5rem !important;
-        height: 7rem !important;
+    .on_banner {
+        width: 90vw;
+    }
+}
+
+.me {
+    position: relative;
+    z-index: 3;
+    margin-top: 5rem;
+    display: flex;
+}
+
+.profilepicture {
+    height: 8.65rem;
+    border-radius: 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+    padding: 0.3rem;
+    position: absolute;
+    left: 1rem;
+}
+
+.badges {
+    display: flex;
+    margin: auto;
+    max-width: 80vw;
+    margin-left: 0.5rem;
+}
+
+.badge {
+    background-color: rgb(60, 53, 69);
+    border-radius: .2rem;
+    margin: 0.2rem 0.9rem 0.2rem 0;
+    padding: 0.3rem 0.4rem 0.3rem 0.4rem;
+    display: flex;
+    font-size: 1.2rem;
+    max-height: 1.4rem;
+    transition-duration: 500ms;
+    box-shadow: -1.5px 1.5px rgb(209, 56, 83),
+        -3px 3px rgb(209, 90, 151),
+        -4.5px 4.5px rgb(108, 67, 212),
+        -6px 6px rgb(55, 142, 212);
+    position: relative;
+    bottom: 0rem
+}
+
+.badge:hover {
+    transform: scale(1.03);
+    box-shadow: -2px 2px rgb(209, 56, 83),
+        -4px 4px rgb(209, 90, 151),
+        -6px 6px rgb(108, 67, 212),
+        -8px 8px rgb(55, 142, 212);
+    bottom: 0.1rem
+}
+
+.badge>svg {
+    color: rgb(123, 148, 228);
+    transition-duration: 500ms;
+}
+
+.badge:hover>svg {
+    color: rgb(61, 116, 236)
+}
+
+.content {
+    margin: 2rem 1rem 1rem 1rem;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        margin-top: 8rem;
     }
 
-    .profilepicture {
-        width: 7rem !important;
+    .banner {
+        height: 11rem;
     }
 
-    .name_container {
+    .on_banner {
+        height: 11rem;
+    }
+
+    .me {
+        margin-top: 1rem;
+    }
+}
+
+.readme {
+    position: relative;
+    user-select: text;
+    background-color: rgb(36, 32, 41, 0.4);
+    padding: 0.8rem 0.8rem 0.8rem 0.4rem;
+    border-radius: 0.2rem;
+    font-size: 1.1rem;
+    font-family: 'Rubik', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.section {
+    margin-top: 1.6rem;
+}
+
+.icon {
+    position: absolute;
+    height: 5rem;
+    right: -0.4rem;
+    top: -0.4rem;
+    border-radius: 0.4rem;
+    background-color: #0f0d10;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.error {
+    z-index: 1000;
+    font-size: 1.2rem;
+    color: rgb(255, 62, 94);
+    background-color: rgba(72, 36, 51, 0.8);
+    border-radius: 0.2rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 3rem;
+    padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+    user-select: text;
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        margin-top: 5rem;
+        width: 100vw;
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+
+    .banner {
+        width: 100vw;
+    }
+
+    .on_banner {
+        width: 100vw;
+    }
+
+    .content {
+        margin-top: 7.6rem;
+    }
+
+    .name {
         position: relative;
-        bottom: 19rem;
-        right: 3.6rem
+        top: 3rem;
     }
 
-    .activitie {
-        font-size: 0.8rem;
+    .badges {
+        position: absolute;
+        top: 5.7rem;
+        right: -2.6rem
     }
 
-    .activitie_img {
-        height: 5rem;
+    .icon {
+        height: 2.9rem;
+        border-radius: 0.3rem;
+        right: -0.2rem;
+        top: -0.2rem;
     }
 
-    .activitie_name {
-        font-size: 1.4rem;
-        color: #987C9F;
+    .error {
+        right: 0rem;
+        top: 0rem;
+        bottom: unset;
+        background-color: rgb(99, 39, 62);
+    }
+}
+
+.fadeout {
+    animation: fadeout 1000ms;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
     }
 
-    .sites {
-        max-height: 6.8rem;
+    to {
+        opacity: 0;
     }
-
 }
