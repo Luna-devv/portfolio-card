@@ -154,28 +154,6 @@ export default function Homepage({ user, error }) {
 
 Homepage.getInitialProps = async () => {
     let luna = await fetch(config.api + `/luna`).then(res => res.json());
-    luna.content.activities.push({
-        "applicationId": "463097721130188830",
-        "name": "YouTube",
-        "url": null,
-        "details": "06 Sportfreunde Stiller - Es Muss Was Wunderbares Sein Von Mir Geliebt Zu Werden",
-        "state": "Listening to a playlist",
-        "createdTimestamp": 1640811066009,
-        "timestamps": {
-            "start": null,
-            "end": 1640811170000
-        },
-        "assets": {
-            "large": {
-                "text": "PreMiD  v2.2.0 • Ext v2.2.3",
-                "image": "https://cdn.discordapp.com/app-assets/463097721130188830/513734690272968717.png"
-            },
-            "small": {
-                "text": "Playing",
-                "image": "https://cdn.discordapp.com/app-assets/463097721130188830/493061639994867714.png"
-            }
-        }
-    })
     let error = false;
     if (!luna?.content?.username) {
         luna.content = {
