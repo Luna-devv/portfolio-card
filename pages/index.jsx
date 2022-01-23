@@ -92,18 +92,24 @@ export default function Homepage({ user, error }) {
                                 <div className={style.readme} style={{ paddingLeft: 14 }} key={activity.applicationId}>
                                     <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{activity.name}</strong><text style={{ color: 'rgb(65, 59, 74)' }}> ⌋ {activity.name === `YouTube` ? 'Watching' : 'Playing'}</text>
                                     <div style={{ display: 'flex' }}>
-                                        <div style={{ position: 'relative' }}>
-                                            <img src={activity.assets.large.image} style={{ height: 100 }} draggable={false} alt={`${activity.name}'s big icon`} title={activity.assets.large.text} />
-                                            <img src={activity.assets.small.image} style={{ height: 27, position: 'absolute', top: 62, left: 76, backgroundColor: '#201d24', borderRadius: 10, outline: '#201d24 solid 0.15rem' }} draggable={false} alt={`${activity.name}'s small icon`} title={activity.assets.small.text} />
+                                        <div style={{ position: 'relative', marginTop: 6 }}>
+                                            {activity.assets.large.image ?
+                                                <img src={activity.assets.large.image} style={{ height: 80, borderRadius: 4 }} draggable={false} alt={`${activity.name}'s big icon`} title={activity.assets.large.text} />
+                                                : <></>
+                                            }
+                                            {activity.assets.small.image ?
+                                                <img src={activity.assets.small.image} style={{ height: 27, position: 'absolute', top: 62, left: 66, backgroundColor: '#201d24', borderRadius: 10, outline: '#201d24 solid 0.2rem' }} draggable={false} alt={`${activity.name}'s small icon`} title={activity.assets.small.text} />
+                                                : <></>
+                                            }
                                         </div>
-                                        <div style={{ marginTop: 26, marginLeft: 4 }}>
+                                        <div style={{ marginTop: 24, marginLeft: 8 }}>
                                             <div style={{ display: 'flex', marginBottom: 2 }}>
                                                 <HiOutlineFolder style={{ minHeight: 21, minWidth: 21 }} />
-                                                <div style={{ marginLeft: 4, marginTop: 3, fontSize: '1.1rem', position: 'relative', bottom: 2 }}>{activity.details.length >= 70 ? `${activity.details.slice(0, -(activity.details.length - 70 + 3))}...` : activity.details}</div>
+                                                <div style={{ marginLeft: 4, marginTop: 3, fontSize: '1.1rem', position: 'relative', bottom: 2 }}>{activity.details?.length >= 70 ? `${activity.details.slice(0, -(activity.details?.length - 70 + 3))}...` : activity.details}</div>
                                             </div>
                                             <div style={{ display: 'flex', marginTop: 2 }}>
                                                 <HiOutlineMenuAlt2 style={{ minHeight: 21, minWidth: 21 }} />
-                                                <div style={{ marginLeft: 4, marginTop: 3, fontSize: '1.1rem', position: 'relative', bottom: 2 }}>{activity.state.length >= 70 ? `${activity.state.slice(0, -(activity.state.length - 70 + 3))}...` : activity.state}</div>
+                                                <div style={{ marginLeft: 4, marginTop: 3, fontSize: '1.1rem', position: 'relative', bottom: 2 }}>{activity.state?.length >= 70 ? `${activity.state.slice(0, -(activity.state?.length - 70 + 3))}...` : activity.state}</div>
                                             </div>
                                         </div>
                                     </div>
