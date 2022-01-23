@@ -1,26 +1,23 @@
 {
-  "name": "luna-site",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@heroicons/react": "^1.0.4",
-    "@tailwindcss/line-clamp": "^0.2.1",
-    "axios": "^0.24.0",
-    "dotenv": "^10.0.0",
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "tailwindcss": "^2.2.9"
-  },
-  "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
-  }
+    "name": "luna-site",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start -p 3041",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "axios": "^0.24.0",
+        "dotenv": "^10.0.0",
+        "next": "11.1.2",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-icons": "^4.3.1"
+    },
+    "devDependencies": {
+        "eslint": "7.32.0",
+        "eslint-config-next": "11.1.2"
+    }
 }
