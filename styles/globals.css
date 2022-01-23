@@ -1,17 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
+body,
 html {
-    font-family: 'Ubuntu',
-        sans-serif;
-    background: #0f0714;
+    font-family: 'Ubuntu', sans-serif;
+    background: rgb(36, 32, 41);
     position: relative;
-    min-height: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
     color: rgb(221, 217, 230);
     margin: 0rem;
     user-select: none;
+    overflow: overlay;
+    overflow-x: hidden !important;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+img,
+br {
+    user-select: none !important;
+}
+
+*::selection {
+    background-color: rgb(103, 91, 117)
 }
 
 body {
@@ -38,36 +51,114 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(40, 20, 46, 0.8);
+    background-color: rgb(32, 28, 37);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(40, 20, 46, 1);
+    background-color: rgb(20, 17, 22);
 }
 
 button {
-    outline: none;
+    background: none;
+    color: inherit;
     border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+.button {
+    cursor: pointer;
+    background-color: rgb(45, 40, 51);
+    padding: 0.43rem 0.8rem 0.43rem 0.8rem;
+    border-radius: 0.2rem;
+    font-family: 'Open Sans', sans-serif;
+    transition-duration: 500ms;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    display: flex;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    background-color: rgb(57, 51, 63);
 }
 
 .set-luna {
-    overflow-x: hidden;
+    z-index: 3;
     font-size: 0.9rem;
     color: #a9aec0;
     position: fixed;
     right: 1rem;
     bottom: 1rem;
     cursor: pointer;
+    animation: laodin-credits 2000ms;
+    overflow: hidden !important;
 }
 
-.luna {
-    display: flex;
+@keyframes laodin-credits {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-@media screen and (max-width: 1000px) {
+.set-luna:hover {
+    animation: rainbow 1.6s;
+}
+
+@keyframes rainbow {
+    from {
+        color: #a9aec0
+    }
+
+    22% {
+        color: rgb(209, 90, 151)
+    }
+
+    44% {
+        color: rgb(209, 56, 83)
+    }
+
+    66% {
+        color: rgb(108, 67, 212)
+    }
+
+    88% {
+        color: rgb(55, 142, 212)
+    }
+
+    to {
+        color: #a9aec0
+    }
+}
+
+@media screen and (max-width: 1120px) {
     .set-luna {
         transform: rotate(-90deg);
         right: -3.6rem;
         bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .set-luna {
+        position: absolute;
+        left: 0;
+        bottom: 0rem;
+        transform: rotate(0deg);
+        height: 2rem;
+        background-color: rgb(20, 17, 22);
+        display: flex;
+        justify-content: center;
+        margin-right: 3rem;
+    }
+
+    .set-luna>a {
+        padding-top: 0.34rem;
     }
 }
