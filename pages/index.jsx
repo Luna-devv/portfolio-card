@@ -62,8 +62,8 @@ export default function Homepage({ user, error }) {
                                 : <></>
                             }
                             <div className={style.badges} style={(user?.status?.emote || user?.status?.text) ? { marginTop: 8 } : { marginTop: width > 540 ? 14 : -14 }}>
-                                <div className={style.badge}> <BiWindowAlt style={{ height: 22, width: 22, marginRight: 4 }} /> UI&nbsp;Designer </div>
-                                <div className={style.badge}> <BiCodeAlt style={{ height: 22, width: 22, marginRight: 4 }} /> Developer </div>
+                                <button className={style.badge} onClick={() => window.open('https://waya.one/go/blog_be499f28-b1ac-48da-b0fa-13a21c12d173')}> <BiWindowAlt style={{ height: 22, width: 22, marginRight: 4 }} /> UI&nbsp;Designer </button>
+                                <button className={style.badge} onClick={() => window.open('https://waya.one/go/github')}> <BiCodeAlt style={{ height: 22, width: 22, marginRight: 4 }} /> Developer </button>
                             </div>
                         </div>
                     </div>
@@ -74,7 +74,7 @@ export default function Homepage({ user, error }) {
                                 I'm <strong>Luna</strong>, born at <strong>17th of April 2007</strong> and live in <strong>Austria</strong> near Vienna.
                                 I'm some hobby <strong>Software Engineer</strong> and <strong>LGBTQ+ Activist</strong>.
                                 I self taught me the <strong>MERN</strong> stack with a bit of help from friends!
-                                Learn more about my story and my projects <button className='link' style={{ fontSize: '1.1rem' }} onClick={() => window.open('https://blog.waya.one/')}>in my blog</button> 🌈
+                                Learn more about my story and my projects <button className='link' style={{ fontSize: '1.1rem' }} onClick={() => window.open('https://waya.one/go/work')}>in my blog</button> 🌈
                             </div>
                             <br />
                             <strong style={{ fontSize: 27 }}>🪄 Languages & Frameworks</strong><br />
@@ -90,7 +90,7 @@ export default function Homepage({ user, error }) {
                         <div className={user.activities.length > 0 ? style.section : ''}>
                             {user?.activities.map((activity) => (
                                 <div className={style.readme} style={{ paddingLeft: 14 }} key={activity.applicationId}>
-                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{activity.name}</strong><text style={{ color: 'rgb(65, 59, 74)' }}> ⌋ {activity.name === `YouTube` ? 'Watching' : 'Playing'}</text>
+                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{activity.name}</strong><text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {activity.name === `YouTube` ? 'Watching' : 'Playing'}</text>
                                     <div style={{ display: 'flex' }}>
                                         <div style={{ position: 'relative', marginTop: 6 }}>
                                             {activity.assets.large.image ?
@@ -119,7 +119,7 @@ export default function Homepage({ user, error }) {
                         <div className={cards.length > 0 ? style.section : ''} style={{ marginBottom: width > 540 ? 20 : 60 }}>
                             {cards.map((card) => (
                                 <div className={style.readme} style={{ paddingLeft: 14 }} key={card.name}>
-                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{card.name}</strong>{card.position ? <text style={{ color: 'rgb(65, 59, 74)' }}> ⌋ {card.position}</text> : <></>}
+                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{card.name}</strong>{card.position ? <text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {card.position}</text> : <></>}
                                     <div style={{ marginTop: 4, display: 'flex' }}>
                                         <HiOutlineNewspaper style={{ minHeight: 22, minWidth: 22 }} />
                                         <div style={{ marginTop: 2 }}>&nbsp;{card.description}</div>

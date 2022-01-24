@@ -37,7 +37,7 @@ export default function render({ Component, pageProps }) {
             <body>
                 <Layout />
                 <div className='set-luna'>
-                    <Link href='/a'>
+                    <Link href='/go/luna'>
                         <a>Made with&nbsp;<AiFillHeart style={{ position: 'relative', top: 2 }} />&nbsp;by&nbsp;Luna</a>
                     </Link>
                 </div>
