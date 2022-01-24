@@ -32,7 +32,7 @@ const cards = [{
 }];
 
 export default function Homepage({ user, error }) {
-    user.status.text = null
+
     const [width, setWidth] = useState()
     useEffect(() => {
         setInterval(() => {
