@@ -1,37 +1,10 @@
-import config from '../config.json';
+import config from '../config';
 import style from '../styles/Home.module.css';
 import { useState, useEffect } from 'react';
 
 import { BiWindowAlt, BiCodeAlt } from 'react-icons/bi';
 import { HiOutlineNewspaper, HiOutlineLink, HiX, HiOutlineExclamation, HiOutlineFolder, HiOutlineMenuAlt2 } from 'react-icons/hi';
-
-const cards = [{
-    name: 'discord-botlist.eu',
-    icon: 'https://cdn.discord-botlist.eu/pictures/logo.png',
-    description: 'We give you the ability to apply and give your bot a page on our site.',
-    url: 'https://discord-botlist.eu',
-    position: `Moderator`
-}, {
-    name: 'Tixte',
-    icon: 'https://tixte.com/static/media/logo_mark.d3b45ae2.png',
-    description: 'The fast, free and easy way to upload and store your files in the cloud.',
-    url: 'https://discord.gg/vWcEAX5G4B',
-    position: `Moderator`
-}, {
-    name: 'Dasu',
-    icon: 'https://dasu.gifts/profile.png',
-    description: 'Utilize powerful rules and control your giveaways with no limitations.',
-    url: 'https://dasu.gifts',
-    position: `Moderator`
-}, {
-    name: 'Pronouns',
-    icon: 'https://cdn.waya.one/r/pronouns.png',
-    description: 'A Simple way to add your Pronouns and Sexualities in Discord.',
-    url: 'https://prns.waya.one',
-    position: `Founder, Developer`
-}];
-
-export default function Homepage({ user, error }) {
+export default function Homepage({ user, cards, error }) {
     const [width, setWidth] = useState()
     useEffect(() => {
         setInterval(() => {
@@ -86,10 +59,10 @@ export default function Homepage({ user, error }) {
                                 •&nbsp; Express
                             </div>
                         </div>
-                        <div className={user.activities.length > 0 ? style.section : ''}>
+                        <div className={user?.activities.length > 0 ? style.section : ''}>
                             {user?.activities.map((activity) => (
                                 <div className={style.readme} style={{ paddingLeft: 14 }} key={activity.applicationId}>
-                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{activity.name}</strong><text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {activity.name === `YouTube` ? 'Watching' : 'Playing'}</text>
+                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{activity.name}</strong><text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {activity.name.toLowerCase().includes(`music`) ? 'Listening' : (activity.name.toLowerCase().includes(`youtube`) ? 'Watching' : activity.name.toLowerCase().includes(`code`) ? 'Developing' : 'Playing')}</text>
                                     <div style={{ display: 'flex' }}>
                                         <div style={{ position: 'relative', marginTop: 6 }}>
                                             {activity.assets.large.image ?
@@ -115,8 +88,8 @@ export default function Homepage({ user, error }) {
                                 </div>
                             ))}
                         </div>
-                        <div className={cards.length > 0 ? style.section : ''} style={{ marginBottom: width > 540 ? 20 : 60 }}>
-                            {cards.map((card) => (
+                        <div className={cards?.length > 0 ? style.section : ''} style={{ marginBottom: width > 540 ? 20 : 60 }}>
+                            {cards?.map((card) => (
                                 <div className={style.readme} style={{ paddingLeft: 14 }} key={card.name}>
                                     <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{card.name}</strong>{card.position ? <text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {card.position}</text> : <></>}
                                     <div style={{ marginTop: 4, display: 'flex' }}>
@@ -152,28 +125,13 @@ export default function Homepage({ user, error }) {
 };
 
 Homepage.getInitialProps = async () => {
-    let luna = await fetch(config.api + `/luna`).then(res => res.json()).catch(() => { return; });
+    let user = {};
+    if (config.api.url && config.api.path) user = await fetch(`${config.api.url}${config.api.path.startsWith(`/`) ? `${config.api.path}` : `/${config.api.path}`}`).then(res => res.json()).catch(() => { return; });
     let error = false;
-    if (!luna?.content?.username) {
-        luna.content = {
-            username: `Lunish`,
-            nickname: `Luna`,
-            avatar: `https://cdn.discordapp.com/avatars/821472922140803112/a_821f41012a430779fb354fa201a97529.gif?size=2048`,
-            nickavatar: `https://cdn.discordapp.com/guilds/923346903289184336/users/821472922140803112/avatars/15fb29ee64bd696c3a79bdfe56a8fa0e.png?size=2048`,
-            banner: `https://cdn.discordapp.com/banners/821472922140803112/a_476c6e1379984c9c6b39f3f2a6e12790.gif?size=600`,
-            status: {
-                state: {
-                    text: `Unknown`,
-                    color: `#747F8D`
-                },
-                emote: null,
-                text: null
-            },
-            activities: [],
-            accentColor: `b6334c`
-        };
-        error = true;
+    if (user?.status !== 200 || !user?.content?.id) {
+        if (config.api.url && config.api.path) error = true;
+        user.content = config.user;
     };
 
-    return { user: luna?.content, error: error };
+    return { user: user?.content, cards: config?.cards, error: error };
 };

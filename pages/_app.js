@@ -17,16 +17,16 @@ export default function render({ Component, pageProps }) {
                 <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
 
                 <meta property='title' content='Luna - Software Engineer and LGBTQ+ Activist' />
-                <meta property='description' content="Heyia, I'm Luna Seemann and I was born 14 years ago and live in Austria." />
+                <meta property='description' content="Heyia, I'm Luna and I was born 14 years ago and live in Austria." />
                 <meta name='keywords' content='Luna, Lunish, Lunish#8888, waya, waya.one, waya profiles, Luna profile, Luna onlyfans, Luna github, Lunish onlyfans, Lunish githu, Luna Seemann, Seemann, discord-botlist.eu, Flamex, Bendix, dbleu' />
 
                 <meta name="twitter:site" content="@waya.one" />
                 <meta name="twitter:title" content="Luna - Software Engineer and LGBTQ+ Activist" />
-                <meta name="twitter:description" content="Heyia, I'm Luna Seemann and I was born 14 years ago and live in Austria." />
+                <meta name="twitter:description" content="Heyia, I'm Luna and I was born 14 years ago and live in Austria." />
                 <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/71079641?v=4" />
 
                 <meta property='og:title' content='Luna - Software Engineer and LGBTQ+ Activist' />
-                <meta property='og:description' content="Heyia, I'm Luna Seemann and I was born 14 years ago and live in Austria." />
+                <meta property='og:description' content="Heyia, I'm Luna and I was born 14 years ago and live in Austria." />
                 <meta property='og:type' content='website' />
                 <meta property='og:image' content='https://avatars.githubusercontent.com/u/71079641?v=4' />
 
@@ -37,9 +37,9 @@ export default function render({ Component, pageProps }) {
             <body>
                 <Layout />
                 <div className='set-luna'>
-                    <Link href='/go/luna'>
-                        <a>Made with&nbsp;<AiFillHeart style={{ position: 'relative', top: 2 }} />&nbsp;by&nbsp;Luna</a>
-                    </Link>
+                    <button onClick={() => window.location.href = '/go/luna'}>
+                        <div>Made with&nbsp;<AiFillHeart style={{ position: 'relative', top: 2 }} />&nbsp;by&nbsp;Luna</div>
+                    </button>
                 </div>
                 <Component {...pageProps} />
             </body>
