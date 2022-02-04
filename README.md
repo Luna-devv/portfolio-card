@@ -23,10 +23,19 @@ yarn run build
 yarn run start
 ```
 
+## Bio
+You can edit your bio in the [`pages/index.jsx`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L44). <br />
+Note that you shouldn't edit anything outside of the div showed bellow because this could break the sites design.
+```jsx
+<div className={style.readme}>
+    { /* Put your bio here */ }
+</div>
+```
+
 ## Cards
 Cards are here to display your various projects. You can set these in the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js) in the [cards Array](https://github.com/Luna-devv/luna-site/blob/main/config.js#L26). <br />
 Here is an example how the each card could look like:
-```json
+```js
 {
     name: "discord-botlist.eu",
     icon: "https://cdn.discord-botlist.eu/pictures/logo.png",
@@ -80,7 +89,7 @@ You can set the API URL in the [`config.js`](https://github.com/Luna-devv/luna-s
 
 In the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L4) you also need to set the PATH after the domain name. If you want to use the root domain just paste a `/` in there, otherwise put the full path in there for example `/luna`. At the end the URL plus the PATH __together__ should look like `[domain][path]` (eg.: `https://waya.one/luna`). <br />
 
-The API needs to acknowledge the request with a [http `200`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) status code in order to work. I personally recommend you also to fill in the [user Object](https://github.com/Luna-devv/luna-site/blob/main/README.md#L24) in case that the API should not respond. <br />
+The API needs to acknowledge the request with a [http `200`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) status code in order to work. I personally recommend you also to fill in the [user Object](https://github.com/Luna-devv/luna-site/blob/main/README.md#a-use-static-data) in case that the API should not respond. <br />
 
 The API should respond with a JSON structure that looks like this: 
 ```json
