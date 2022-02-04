@@ -1,3 +1,6 @@
+[![Preview](https://polywork-production.imgix.net/f3mc2tsl2das7idxuc2vdw5ls0gv)](https://polywork-production.imgix.net/f3mc2tsl2das7idxuc2vdw5ls0gv)
+<br />
+
 ## Basics
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 First, run the development server:
@@ -10,7 +13,7 @@ yarn dev
 
 ## **NOT** using Internal API
 
-If you don't want to use an API to update your data, just go to the [`pages/index.jsx`](https://github.com/Luna-devv/luna-site/blob/57514801427a9ecc06c1a33b79966b4d16303ced/pages/index.jsx#L155) '`Homepage.getInitialProps`' and paste the following code there:
+If you don't want to use an API to update your data, just go to the [`pages/index.jsx`](https://github.com/Luna-devv/luna-site/blob/main/pages/index.jsx#L155) '`Homepage.getInitialProps`' and paste the following code there:
 ```js
 Homepage.getInitialProps = async () => {
     user.content = {
