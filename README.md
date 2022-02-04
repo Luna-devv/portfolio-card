@@ -26,7 +26,7 @@ yarn run start
 ## Cards
 Cards are here to display your various projects. You can set these in the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js) in the [cards Array](https://github.com/Luna-devv/luna-site/blob/main/config.js#L26). <br />
 Here is an example how the each card could look like:
-```json
+```js
 {
     name: "discord-botlist.eu",
     icon: "https://cdn.discord-botlist.eu/pictures/logo.png",
