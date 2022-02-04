@@ -11,7 +11,7 @@ Go.getInitialProps = async ({ query, req, res }) => {
         res.writeHead(307, {
             Location: link?.content?.destination
         });
-        let a = await fetch(`${config.api}/links/${query.id}`, {
+        fetch(`${config.api}/links/${query.id}`, {
             method: 'PATCH',
             headers: {
                 authorization: process.env?.token

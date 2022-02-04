@@ -78,6 +78,9 @@
     margin: auto;
     max-width: 80vw;
     margin-left: 0.5rem;
+    position: absolute;
+    left: 10.9rem;
+    top: 5.8rem
 }
 
 .badge {
@@ -116,7 +119,7 @@
 }
 
 .content {
-    margin: 2rem 1rem 1rem 1rem;
+    margin: 4.6rem 1rem 1rem 1rem;
 }
 
 @media screen and (max-width: 700px) {
@@ -201,9 +204,8 @@
     }
 
     .badges {
-        position: absolute;
-        top: 5.7rem;
-        right: -2.6rem
+        left: 1rem;
+        top: 9.66rem
     }
 
     .icon {

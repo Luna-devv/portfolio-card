@@ -6,7 +6,7 @@ export default function Layout({ user }) {
                 <ul>
                     <li>
                         <button style={{ display: 'flex', backgroundColor: 'transparent', color: 'inherit' }} onClick={() => window.location.href = '/go/work'}>
-                            <img src='https://cdn.discordapp.com/avatars/821472922140803112/a_821f41012a430779fb354fa201a97529.gif?size=2048' alt='profile picture' style={{ height: 38.7, borderRadius: 2 }} draggable={false} />
+                            <img src='https://cdn.waya.one/r/luna_snapDog.png' alt='profile picture' style={{ height: 38.7, borderRadius: 2 }} draggable={false} />
                             <div className='lunaSeemann'>Luna Seemann</div>
                         </button>
                     </li>
