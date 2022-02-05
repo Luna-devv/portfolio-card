@@ -1,6 +1,6 @@
 <h1 align="center">Luna Site</h1>
 
-[![Preview](https://polywork-production.imgix.net/f3mc2tsl2das7idxuc2vdw5ls0gv)](https://polywork-production.imgix.net/f3mc2tsl2das7idxuc2vdw5ls0gv)
+[![Preview](https://cdn.waya.one/r/1644002382.png)](https://cdn.waya.one/r/1644002382.png)
 <br />
 
 ## Basics

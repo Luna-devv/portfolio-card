@@ -2,8 +2,7 @@ import config from '../config';
 import style from '../styles/Home.module.css';
 import { useState, useEffect } from 'react';
 
-import { BiWindowAlt, BiCodeAlt } from 'react-icons/bi';
-import { HiOutlineNewspaper, HiOutlineLink, HiX, HiOutlineExclamation, HiOutlineFolder, HiOutlineMenuAlt2 } from 'react-icons/hi';
+import { HiOutlineNewspaper, HiOutlineLink, HiX, HiOutlineExclamation, HiOutlineFolder, HiOutlineMenuAlt2, HiOutlineFire, HiOutlineCode } from 'react-icons/hi';
 export default function Homepage({ user, cards, error }) {
     const [width, setWidth] = useState()
     useEffect(() => {
@@ -35,8 +34,8 @@ export default function Homepage({ user, cards, error }) {
                             }
                         </div>
                         <div className={style.badges} style={(user?.status?.emote || user?.status?.text) ? { marginTop: 8 } : { marginTop: width > 540 ? 14 : 4 }}>
-                            <button className={style.badge} onClick={() => window.open('https://waya.one/go/blog_be499f28-b1ac-48da-b0fa-13a21c12d173')}> <BiWindowAlt style={{ height: 22, width: 22, marginRight: 4 }} /> UI&nbsp;Designer </button>
-                            <button className={style.badge} onClick={() => window.open('https://waya.one/go/github')}> <BiCodeAlt style={{ height: 22, width: 22, marginRight: 4 }} /> Developer </button>
+                            <button className={style.badge} title='https://waya.one/go/blog_be499f28-b1ac-48da-b0fa-13a21c12d173' onClick={() => window.open('https://waya.one/go/blog_be499f28-b1ac-48da-b0fa-13a21c12d173')}> <HiOutlineFire style={{ height: 22, width: 22, marginRight: 4 }} /> UI&nbsp;Designer </button>
+                            <button className={style.badge} title='https://waya.one/go/github' onClick={() => window.open('https://waya.one/go/github')}> <HiOutlineCode style={{ height: 22, width: 22, marginRight: 4 }} /> Developer </button>
                         </div>
                     </div>
                     <div className={style.content}>
@@ -58,11 +57,17 @@ export default function Homepage({ user, cards, error }) {
                                 •&nbsp; React, Next.JS<br />
                                 •&nbsp; Express
                             </div>
+                            <br />
+                            <strong style={{ fontSize: 27 }}>🍧 Contact</strong><br />
+                            <div style={{ marginTop: 8, marginLeft: 12 }}>
+                                You want to collaborate with me or just talk? <br />
+                                Join my <button className='link' style={{ fontSize: '1.1rem' }} onClick={() => window.open('https://waya.one/go/discord')}>Discord server</button> and shoot a ping at me!
+                            </div>
                         </div>
                         <div className={user?.activities.length > 0 ? style.section : ''}>
                             {user?.activities.map((activity) => (
                                 <div className={style.readme} style={{ paddingLeft: 14 }} key={activity.applicationId}>
-                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{activity.name}</strong><text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {activity.name.toLowerCase().includes(`music`) ? 'Listening' : (activity.name.toLowerCase().includes(`youtube`) ? 'Watching' : activity.name.toLowerCase().includes(`code`) ? 'Developing' : 'Playing')}</text>
+                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{activity.name}</strong><text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {activity.name.toLowerCase().includes(`music`) ? 'Listening' : (activity.name.toLowerCase().includes(`youtube`) ? 'Watching' : (activity.name.toLowerCase().includes(`code`) ? 'Developing' : (activity.name.toLowerCase().includes(`github`) ? 'Browsing' : 'Playing')))}</text>
                                     <div style={{ display: 'flex' }}>
                                         <div style={{ position: 'relative', marginTop: 6 }}>
                                             {activity.assets.large.image ?
