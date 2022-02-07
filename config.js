@@ -24,6 +24,12 @@ module.exports = {
         accentColor: "#ce3760"
     },
     cards: [{
+        name: 'waya',
+        icon: 'https://cdn.discordapp.com/avatars/857230367350063104/a54dbb364757f99076f36003ae68f77f.png?size=1024',
+        description: 'A simple multi-function bot with Pronouns Select, Starboard and more.',
+        url: 'https://waya.one/go/topgg',
+        position: `Developer`
+    }, {
         name: 'discord-botlist.eu',
         icon: 'https://cdn.discord-botlist.eu/pictures/logo.png',
         description: 'We give you the ability to apply and give your bot a page on our site.',
