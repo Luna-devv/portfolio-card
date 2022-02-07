@@ -19,8 +19,8 @@ To deploy and start the server run:
 npm run build
 npm run start
 # or
-yarn run build
-yarn run start
+yarn build
+yarn start
 ```
 
 ## Bio
