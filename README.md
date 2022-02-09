@@ -90,6 +90,7 @@ You can set the API URL in the [`config.js`](https://github.com/Luna-devv/luna-s
 In the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L4) you also need to set the PATH after the domain name. If you want to use the root domain just paste a `/` in there, otherwise put the full path in there for example `/luna`. At the end the URL plus the PATH __together__ should look like `[domain][path]` (eg.: `https://waya.one/luna`). <br />
 
 The API needs to acknowledge the request with a [http `200`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) status code in order to work. I personally recommend you also to fill in the [user Object](https://github.com/Luna-devv/luna-site/blob/main/README.md#a-use-static-data) in case that the API should not respond. <br />
+A code example/template for the API can be found in the [gist here](https://gist.github.com/Luna-devv/5793ced1319f4fc3a6c713bfb89f9854). <br />
 
 The API should respond with a JSON structure that looks like this: 
 ```json
