@@ -131,11 +131,13 @@ export default function Homepage({ user, cards, error }) {
 
 Homepage.getInitialProps = async () => {
     let user = {};
-    if (config.api.url && config.api.path) user = await fetch(`${config.api.url}${config.api.path.startsWith(`/`) ? `${config.api.path}` : `/${config.api.path}`}`).then(res => res.json()).catch(() => { return; });
     let error = false;
+    if (config.api.url && config.api.path) try {
+        user = await fetch(`${config.api.url}${config.api.path.startsWith(`/`) ? `${config.api.path}` : `/${config.api.path}`}`).then(res => res.json()).catch(() => { return; });
+    } catch (e) { error = e }
     if (user?.status !== 200 || !user?.content?.id) {
         if (config.api.url && config.api.path) error = true;
-        user.content = config.user;
+        user = { content: config.user };
     };
 
     return { user: user?.content, cards: config?.cards, error: error };
