@@ -8,7 +8,7 @@ module.exports = {
         username: "Lunish",
         discriminator: "8888",
         nickname: "Luna",
-        nickavatar: "https://cdn.waya.one/r/luna_lone1.gif",
+        nickavatar: "https://cdn.waya.one/r/luna_smile.png",
         status: {
             state: {
                 text: "dnd",
@@ -19,7 +19,7 @@ module.exports = {
         },
         activities: [],
         createdTimestamp: 1615924806867,
-        avatar: "https://cdn.waya.one/r/luna_lone1.gif",
+        avatar: "https://cdn.waya.one/r/luna_smile.png",
         banner: "https://cdn.waya.one/r/sunset.gif",
         accentColor: "#ce3760"
     },
@@ -53,5 +53,49 @@ module.exports = {
         description: 'A Simple way to add your Pronouns and Sexualities in Discord.',
         url: 'https://prns.waya.one',
         position: `Founder, Developer`
-    }]
+    }],
+    header: {
+        icon: `https://cdn.waya.one/r/luna_lone1.gif`,
+        name: `Luna Seemann`,
+        buttons: {
+            Discord: `/go/discord`,
+            GitHub: `/go/github`,
+            Twitter: `/go/twitter`
+        }
+    },
+    metadata: {
+        title: `Luna - Software Engineer and LGBTQ+ Activist`,
+        description: `Heyia, I'm Luna and I was born 14 years ago and live in Austria.`,
+        image: `https://avatars.githubusercontent.com/u/71079641?v=4`,
+        domainName: `waya.one`,
+        color: `#f19bec`,
+        keywords: [
+            'Luna',
+            'Lunish',
+            'Lunish#8888',
+            'Lunish Twitter',
+            'Lunish Discord',
+            'Lunish GitHub',
+            'Lunish Onlyfans',
+            'waya bot',
+            'waya',
+            'waya.one',
+            'discord waya',
+            'Seemann',
+            'Luna Seemann',
+            'Flamex',
+            'Bendix',
+            'dbleu',
+            'dbleu staff',
+            'discord-botlist.eu',
+            'discord-botlist.eu staff',
+            'Tixte',
+            'Tixte staff',
+            'Dasu',
+            'Dasu staff',
+            'Pronouns',
+            'Pronouns bot',
+            'Pronouns discord'
+        ],
+    }
 }

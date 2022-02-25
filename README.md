@@ -23,7 +23,7 @@ yarn build
 yarn start
 ```
 
-## Bio
+## 1. Bio
 You can edit your bio in the [`pages/index.jsx`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L44). <br />
 Note that you shouldn't edit anything outside of the div showed bellow because this could break the sites design.
 ```jsx
@@ -32,9 +32,9 @@ Note that you shouldn't edit anything outside of the div showed bellow because t
 </div>
 ```
 
-## Cards
+## 2. Cards
 Cards are here to display your various projects. You can set these in the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js) in the [cards Array](https://github.com/Luna-devv/luna-site/blob/main/config.js#L26). <br />
-Here is an example how the each card could look like:
+Here is an example how the **each** card could look like:
 ```js
 {
     name: "discord-botlist.eu",
@@ -47,11 +47,11 @@ Here is an example how the each card could look like:
 Please note that `cards` should **not** be an [Object](https://www.w3schools.com/js/js_objects.asp)(!), it needs to be an [Array](https://www.w3schools.com/js/js_arrays.asp) with the structure __in it__ showed above.
 
 
-## a) Use static data
+## 3a. Use static data
 If you don't want to use an API, just go to the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js) and set both [`api.url`]((https://github.com/Luna-devv/luna-site/blob/main/config.js#L3)) and [`api.path`]((https://github.com/Luna-devv/luna-site/blob/main/config.js#L4)) to [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null). <br />
  In the next step enter your user data in the [user Object](https://github.com/Luna-devv/luna-site/blob/main/config.js#L6). <br />
 
-Here is an example how the config could look like:
+Here is an example how the config.js could look like at this point:
 ```js
 module.exports = {
     api: {
@@ -77,19 +77,18 @@ module.exports = {
         avatar: "https://cdn.waya.one/r/luna_lone1.gif",
         banner: "https://cdn.waya.one/r/sunset.gif",
         accentColor: "#ce3760"
-    },
-    cards: []
+    }
 }
 
 ```
 
-## b) Use an API
+## 3b. Use an API
 The best way to use this website is using an internal-API. <br />
 You can set the API URL in the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L3), please note that this should be only the domain name with the protocol like `https://api.waya.one`. The URL should **not** have the path in it like `https://api.waya.one/` or `https://api.waya.one/luna`! <br />
 
 In the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L4) you also need to set the PATH after the domain name. If you want to use the root domain just paste a `/` in there, otherwise put the full path in there for example `/luna`. At the end the URL plus the PATH __together__ should look like `[domain][path]` (eg.: `https://waya.one/luna`). <br />
 
-The API needs to acknowledge the request with a [http `200`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) status code in order to work. I personally recommend you also to fill in the [user Object](https://github.com/Luna-devv/luna-site/blob/main/README.md#a-use-static-data) in case that the API should not respond. <br />
+The API needs to acknowledge the request with a [http `200`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200) status code in order to work. I personally recommend you also to fill in the [user Object](https://github.com/Luna-devv/luna-site/blob/main/README.md#3a-use-static-data) in case that the API should not respond. <br />
 A code example/template for the API can be found in the [gist here](https://gist.github.com/Luna-devv/5793ced1319f4fc3a6c713bfb89f9854). <br />
 
 The API should respond with a JSON structure that looks like this: 
@@ -141,6 +140,48 @@ The API should respond with a JSON structure that looks like this:
         "accentColor": "#ffff"
     }
 }
+```
+
+## 4. Header
+The header is displayed on every page. It's here to display informations that could be useful everywhere like Icon, name and varius links such as Discord, GitHub and Twitter. To configure this data head over to the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L57) once again and go to the `header` object. <br />
+
+The object should look like this at the end:
+```js
+header: {
+    icon: `https://cdn.waya.one/r/luna_lone1.gif`,
+    name: `Luna Seemann`,
+    buttons: {
+        Discord: `/go/discord`,
+        GitHub: `/go/github`,
+        Twitter: `/go/twitter`
+    }
+}
+```
+
+## 5. Meta tags
+Last but not least the meta tags. This are important if other websites like Discord, Twitter or Slack should show informations about your website, in the picture bellow you can see an example how it could look like in Discord.
+<img src='https://cdn.waya.one/r/1645794994.png' style='border-radius: 0.4rem; max-height: 8rem;' /> <br />
+
+However, open the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L66) for the last time and edit the `metadata` object.
+Please note that the `keywords` value needs to be an [Array](https://www.w3schools.com/js/js_arrays.asp) and the `color` value a valid [hex color](https://htmlcolorcodes.com/color-picker/)! <br />
+This is how it could look like:
+```js
+metadata: {
+    title: `Luna - Software Engineer and LGBTQ+ Activist`,
+    description: `Heyia, I'm Luna and I was born 14 years ago and live in Austria.`,
+    image: `https://avatars.githubusercontent.com/u/71079641?v=4`,
+    domainName: `waya.one`,
+    color: `#f19bec`,
+    keywords: [
+        'Luna',
+        'Lunish',
+        'Lunish#8888',
+        'waya bot',
+        'waya',
+        'waya.one',
+        'discord waya',
+        ],
+    }
 ```
 
 ## Support
