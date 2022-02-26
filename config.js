@@ -1,7 +1,7 @@
 module.exports = {
     api: {
-        url: 'https://api.waya.one',
-        path: '/luna'
+        url: 'https://whois.waya.one',
+        path: '/'
     },
     user: {
         id: "821472922140803112",
