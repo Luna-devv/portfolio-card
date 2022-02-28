@@ -95,7 +95,7 @@ export default function Homepage({ user }) {
 };
 
 Homepage.getInitialProps = async () => {
-    const luna = await fetch(config.api + `/luna`).then(res => res.json());
+    const luna = await fetch(config.api + `/`).then(res => res.json());
     console.log(luna.content)
     return { user: luna.content };
 };
