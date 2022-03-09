@@ -1,7 +1,7 @@
 module.exports = {
     api: {
-        url: 'https://whois.waya.one',
-        path: '/'
+        url: null,
+        path: null
     },
     user: {
         id: "821472922140803112",
