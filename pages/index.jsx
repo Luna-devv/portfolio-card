@@ -96,7 +96,17 @@ export default function Homepage({ user, cards, error }) {
                         <div className={cards?.length > 0 ? style.section : ''} style={{ marginBottom: width > 540 ? 20 : 60 }}>
                             {cards?.map((card) => (
                                 <div className={style.readme} style={{ paddingLeft: 14 }} key={card.name}>
-                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{card.name}</strong>{card.position ? <text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {card.position}</text> : <></>}
+                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{card.name}</strong>
+                                    {card?.bot > 0 ?
+                                        <badge style={{ backgroundColor: `#5865f2`, fontWeight: 600, fontFamily: 'Open Sans, sans-serif', fontSize: 13, padding: 2, paddingRight: 6, paddingLeft: (card?.bot > 1 ? 19 : 6), borderRadius: 4, color: '#fff', position: 'relative', marginLeft: 4 }}>
+                                            {card?.bot > 1 ? <svg style={{ position: 'absolute', top: 4, left: 2.5 }}>
+                                                <path d="M7.4,11.17,4,8.62,5,7.26l2,1.53L10.64,4l1.36,1Z" fill="#fff"></path>
+                                            </svg> : <></>}
+                                            BOT
+                                        </badge>
+                                        : <></>
+                                    }
+                                    {card.position ? <text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {card.position}</text> : <></>}
                                     <div style={{ marginTop: 4, display: 'flex' }}>
                                         <HiOutlineNewspaper style={{ minHeight: 22, minWidth: 22 }} />
                                         <div style={{ marginTop: 2 }}>&nbsp;{card.description}</div>

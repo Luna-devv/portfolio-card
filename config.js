@@ -28,7 +28,29 @@ module.exports = {
         icon: 'https://cdn.discordapp.com/avatars/857230367350063104/a54dbb364757f99076f36003ae68f77f.png?size=1024',
         description: 'A simple multi-function bot with Pronouns Select, Starboard and more.',
         url: 'https://waya.one/go/topgg',
-        position: `Developer`
+        position: `Founder, Developer`,
+        bot: 2
+    }, {
+        name: 'Dasu',
+        icon: 'https://cdn.discordapp.com/avatars/525748238255390721/8787f4919607add166979e0d9578b9fb.png?size=1024',
+        description: 'Utilize powerful rules and control your giveaways with no limitations.',
+        url: 'https://dasu.gifts',
+        position: `Moderator`,
+        bot: 2
+    }, {
+        name: 'Pronouns',
+        icon: 'https://cdn.waya.one/r/pronouns.png',
+        description: 'A Simple way to add your Pronouns and Sexualities in Discord.',
+        url: 'https://prns.waya.one',
+        position: `Founder, Developer`,
+        bot: 2
+    }, {
+        name: 'Formie',
+        icon: 'https://cdn.discordapp.com/attachments/955467053425369191/955468699958149120/higlitedblue.png',
+        description: 'A simple Bot to manage your Apps over very simple and user-friendly forms!',
+        url: 'https://discord.gg/7GuTWp4X9z',
+        position: `Developer`,
+        bot: 1
     }, {
         name: 'discord-botlist.eu',
         icon: 'https://cdn.discord-botlist.eu/pictures/logo.png',
@@ -41,18 +63,6 @@ module.exports = {
         description: 'The fast, free and easy way to upload and store your files in the cloud.',
         url: 'https://discord.gg/vWcEAX5G4B',
         position: `Moderator`
-    }, {
-        name: 'Dasu',
-        icon: 'https://dasu.gifts/profile.png',
-        description: 'Utilize powerful rules and control your giveaways with no limitations.',
-        url: 'https://dasu.gifts',
-        position: `Moderator`
-    }, {
-        name: 'Pronouns',
-        icon: 'https://cdn.waya.one/r/pronouns.png',
-        description: 'A Simple way to add your Pronouns and Sexualities in Discord.',
-        url: 'https://prns.waya.one',
-        position: `Founder, Developer`
     }],
     header: {
         icon: `https://cdn.waya.one/r/luna_lone1.gif`,
