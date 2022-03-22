@@ -41,9 +41,11 @@ Here is an example how the **each** card could look like:
     icon: "https://cdn.discord-botlist.eu/pictures/logo.png",
     description: "We give you the ability to apply and give your bot a page on our site.",
     url: "https://discord-botlist.eu",
-    position: "Moderator"
+    position: "Moderator",
+    bot: 0
 }
 ```
+With the `bot` variable you can show off if it's a discord bot or not. `1` is a normal bot and `2` would be a verified discord bot. <br />
 Please note that `cards` should **not** be an [Object](https://www.w3schools.com/js/js_objects.asp)(!), it needs to be an [Array](https://www.w3schools.com/js/js_arrays.asp) with the structure __in it__ showed above.
 
 
