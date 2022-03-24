@@ -1,12 +1,17 @@
 import React from 'react';
 import config from '../../config';
 
-export default function Go({ error }) {
-    return <>{error ? <>{JSON.stringify(error)}</> : <>This redirect cannot be found</>}</>
+export default function Go({ link }) {
+    return (
+        <>
+            {JSON.stringify(link, null, 4)}
+        </>
+    )
 };
 
 Go.getInitialProps = async ({ query, req, res }) => {
-    const link = await fetch(`${config.api.url?.replace('whois', 'api')}/links/${query.id}`).then(res => res.json()).catch((error) => { res.end(); return { error }; });
+    const link = await fetch(`${config.api.url?.replace('whois', 'api')}/links/${query.id}`).then(res => res.json()).catch(() => { res.end(); return {}; });
+
     if (link?.content?.destination) {
         res.writeHead(307, {
             Location: link?.content?.destination
@@ -20,5 +25,5 @@ Go.getInitialProps = async ({ query, req, res }) => {
         res.end();
     };
 
-    return {};
+    return { link };
 };
