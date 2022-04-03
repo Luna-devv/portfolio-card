@@ -1,6 +1,6 @@
 module.exports = {
     api: {
-        url: 'https://whois.waya.one',
+        url: 'http://whois.waya.one',
         path: '/'
     },
     user: {
@@ -8,7 +8,7 @@ module.exports = {
         username: "Lunish",
         discriminator: "8888",
         nickname: "Luna",
-        nickavatar: "https://cdn.waya.one/r/luna_smile.png",
+        nickavatar: "https://cdn.waya.one/r/cat_luna.png",
         status: {
             state: {
                 text: "dnd",
@@ -19,15 +19,15 @@ module.exports = {
         },
         activities: [],
         createdTimestamp: 1615924806867,
-        avatar: "https://cdn.waya.one/r/luna_smile.png",
+        avatar: "https://cdn.waya.one/r/cat_luna.png",
         banner: "https://cdn.waya.one/r/sunset.gif",
         accentColor: "#ce3760"
     },
     cards: [{
-        name: 'waya',
+        name: 'Waya',
         icon: 'https://cdn.discordapp.com/avatars/857230367350063104/a54dbb364757f99076f36003ae68f77f.png?size=1024',
         description: 'A simple multi-function bot with Pronouns Select, Starboard and more.',
-        url: 'https://waya.one/go/topgg',
+        url: 'https://waya.one',
         position: `Founder, Developer`,
         bot: 2
     }, {
@@ -46,11 +46,11 @@ module.exports = {
         bot: 2
     }, {
         name: 'Formie',
-        icon: 'https://cdn.discordapp.com/attachments/955467053425369191/955468699958149120/higlitedblue.png',
+        icon: 'https://cdn.waya.one/r/formie.gif',
         description: 'A simple Bot to manage your Apps over very simple and user-friendly forms!',
         url: 'https://discord.gg/7GuTWp4X9z',
         position: `Developer`,
-        bot: 1
+        bot: 2
     }, {
         name: 'discord-botlist.eu',
         icon: 'https://cdn.discord-botlist.eu/pictures/logo.png',
@@ -65,8 +65,8 @@ module.exports = {
         position: `Moderator`
     }],
     header: {
-        icon: `https://cdn.waya.one/r/luna_lone1.gif`,
-        name: `Luna Seemann`,
+        icon: `https://cdn.waya.one/r/cat_luna.png`,
+        name: `Lunish`,
         buttons: {
             Discord: `/go/discord`,
             GitHub: `/go/github`,

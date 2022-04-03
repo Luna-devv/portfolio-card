@@ -11,7 +11,7 @@ export default function render({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <script async src="https://arc.io/widget.min.js#sqvWfDKJ"></script>
+                <script async src="https://arc.io/widget.min.js#j5S43cTu"></script>
                 <meta charSet='utf-8' />
                 <meta name='viewport' content='width=device-width, initial-scale=1.0' />
                 <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
