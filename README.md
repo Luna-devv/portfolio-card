@@ -86,7 +86,7 @@ module.exports = {
 
 ## 3b. Use an API
 The best way to use this website is using an internal-API. <br />
-You can set the API URL in the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L3), please note that this should be only the domain name with the protocol like `https://api.waya.one`. The URL should **not** have the path in it like `https://api.waya.one/` or `https://api.waya.one/luna`! <br />
+You can set the API URL in the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L3), please note that this should be only the domain name with the protocol like `https://api.waya.one`. The URL should __**not**__ have the path in it like `https://api.waya.one/` or `https://api.waya.one/luna`! <br />
 
 In the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L4) you also need to set the PATH after the domain name. If you want to use the root domain just paste a `/` in there, otherwise put the full path in there for example `/luna`. At the end the URL plus the PATH __together__ should look like `[domain][path]` (eg.: `https://waya.one/luna`). <br />
 
