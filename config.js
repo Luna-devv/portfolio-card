@@ -31,27 +31,27 @@ module.exports = {
         position: `Founder, Developer`,
         bot: 2
     }, {
-        name: 'Dasu',
-        icon: 'https://cdn.discordapp.com/avatars/525748238255390721/8787f4919607add166979e0d9578b9fb.png?size=1024',
-        description: 'Utilize powerful rules and control your giveaways with no limitations.',
-        url: 'https://dasu.gifts',
-        position: `Moderator`,
-        bot: 2
-    }, {
-        name: 'Pronouns',
-        icon: 'https://cdn.waya.one/r/pronouns.png',
-        description: 'A Simple way to add your Pronouns and Sexualities in Discord.',
-        url: 'https://prns.waya.one',
-        position: `Founder, Developer`,
-        bot: 2
-    }, {
-        name: 'Formie',
-        icon: 'https://cdn.waya.one/r/formie.gif',
-        description: 'A simple Bot to manage your Apps over very simple and user-friendly forms!',
-        url: 'https://discord.gg/7GuTWp4X9z',
-        position: `Developer`,
-        bot: 2
-    }, {
+        //     name: 'Dasu',
+        //     icon: 'https://cdn.discordapp.com/avatars/525748238255390721/8787f4919607add166979e0d9578b9fb.png?size=1024',
+        //     description: 'Utilize powerful rules and control your giveaways with no limitations.',
+        //     url: 'https://dasu.gifts',
+        //     position: `Moderator`,
+        //     bot: 2
+        // }, {
+        //     name: 'Pronouns',
+        //     icon: 'https://cdn.waya.one/r/pronouns.png',
+        //     description: 'A Simple way to add your Pronouns and Sexualities in Discord.',
+        //     url: 'https://prns.waya.one',
+        //     position: `Founder, Developer`,
+        //     bot: 2
+        // }, {
+        //     name: 'Formie',
+        //     icon: 'https://cdn.waya.one/r/formie.gif',
+        //     description: 'A simple Bot to manage your Apps over very simple and user-friendly forms!',
+        //     url: 'https://discord.gg/7GuTWp4X9z',
+        //     position: `Developer`,
+        //     bot: 2
+        // }, {
         name: 'discord-botlist.eu',
         icon: 'https://cdn.discord-botlist.eu/pictures/logo.png',
         description: 'We give you the ability to apply and give your bot a page on our site.',
