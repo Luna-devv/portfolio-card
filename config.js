@@ -75,9 +75,9 @@ module.exports = {
     },
     metadata: {
         title: `Luna - Software Engineer and LGBTQ+ Activist`,
-        description: `Heyia, I'm Luna and I was born 14 years ago and live in Austria.`,
+        description: `Heyia, I'm Luna, born at 17th of April and currently live in Austria near Vienna.\nI'm female and my pronouns are She/Her!`,
         image: `https://avatars.githubusercontent.com/u/71079641?v=4`,
-        domainName: `waya.one`,
+        domainName: `lunish.gay`,
         color: `#f19bec`,
         keywords: [
             'Luna',
