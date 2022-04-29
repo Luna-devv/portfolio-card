@@ -14,7 +14,7 @@ Go.getInitialProps = async ({ query, req, res }) => {
 
     if (link?.content?.destination) {
         res.writeHead(307, {
-            Location: link?.content?.destination
+            Location: `${link?.content?.destination}${req.url.split('?')[1] ? `?${req.url.split('?')[1]}` : ''}`
         });
         fetch(`${config.api.url?.replace('whois', 'api')}/links/${query.id}`, {
             method: 'PATCH',
