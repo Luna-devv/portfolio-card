@@ -61,7 +61,7 @@ module.exports = {
     },
     metadata: {
         title: `Luna - Software Engineer and LGBTQ+ Activist`,
-        description: `Heyia, I'm Luna, born at 17th of April and currently live in Austria near Vienna.\nI'm female and my pronouns are She/Her!`,
+        description: `Heyia, I'm Luna, born at 17th of April and currently live in Austria.\nI'm female and my pronouns are She/Her!`,
         image: `https://avatars.githubusercontent.com/u/71079641?v=4`,
         domainName: `lunish.gay`,
         color: `#f19bec`,
@@ -91,7 +91,11 @@ module.exports = {
             'Dasu staff',
             'Pronouns',
             'Pronouns bot',
-            'Pronouns discord'
+            'Pronouns discord',
+            'discord bot',
+            'discord bots',
+            'discord',
+            'botlist'
         ],
     }
 }

@@ -1,10 +1,11 @@
 import config from '../config';
-import style from '../styles/Home.module.css';
 import { useState, useEffect } from 'react';
+import style from '../styles/Home.module.css';
 
 import { HiOutlineNewspaper, HiOutlineLink, HiX, HiOutlineExclamation, HiOutlineFolder, HiOutlineMenuAlt2, HiOutlineFire, HiOutlineCode } from 'react-icons/hi';
-export default function Homepage({ user, cards, error }) {
-    const [width, setWidth] = useState()
+export default function Homepage({ user, cards, error, light }) {
+
+    const [width, setWidth] = useState();
     useEffect(() => {
         setInterval(() => {
             if (window.innerWidth == width) return;
@@ -13,33 +14,33 @@ export default function Homepage({ user, cards, error }) {
     });
     return (
         <>
-            <div className={style.align}>
-                <div className={style.container}>
+            <div className={`${style.align} ${light ? style.align_light : ''}`}>
+                <div className={`${style.container} ${light ? style.container_light : ''}`}>
                     <div className={style.align}>
                         <div alt='banner' className={style.banner} style={{ background: `url('${user?.banner}') no-repeat left top`, backgroundSize: 'cover' }}></div>
                         <div className={style.on_banner} style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0) 68%, rgb(30, 26, 34) 100%)', display: user?.banner ? '' : 'none' }} />
                     </div>
                     <div className={style.me}>
                         <div className={style.profilepicture} style={{ backgroundColor: (user?.status?.state?.color || `#747F8D`) }}>
-                            <img src={user?.avatar} alt='profile picture' draggable={false} style={{ width: 138, borderRadius: 10 }} />
+                            <img src={user?.nickavatar ?? user?.avatar} alt='profile picture' draggable={false} style={{ width: 138, borderRadius: 10 }} />
                         </div>
                         <div style={{ marginLeft: 176, marginTop: (user?.status?.emote || user?.status?.text) ? 14 : 35 }} className={style.name}>
                             <text style={(user?.status?.emote || user?.status?.text) ? { fontSize: 44, color: '#fff' } : { fontSize: 48, position: 'relative', top: 4, color: '#fff' }}>{user?.nickname}</text>
                             {(user?.status?.emote || user?.status?.text) ?
                                 <div style={{ display: 'felx' }}>
                                     {user?.status?.emote ? <img src={user?.status?.emote} style={{ width: 24, borderRadius: 3, marginTop: 4, marginRight: 3 }} draggable={false} /> : <></>}
-                                    <text style={{ position: 'relative', top: -5, left: 4, color: '#CCCCCC', fontSize: 20 }}>{user?.status?.text ? user?.status?.text : ``}</text>
+                                    <text style={{ position: 'relative', top: -5, left: 4, color: '#CCCCCC', fontSize: 20 }}>{user?.status?.text ? (user.status.text.length > 59 ? (user.status.text.slice(0, 60) + '...') : user.status.text) : ''}</text>
                                 </div>
                                 : <></>
                             }
                         </div>
                         <div className={style.badges} style={(user?.status?.emote || user?.status?.text) ? { marginTop: 8 } : { marginTop: width > 540 ? 14 : 4 }}>
-                            <button className={style.badge} title='https://waya.one/go/blog_be499f28-b1ac-48da-b0fa-13a21c12d173' onClick={() => window.open('https://waya.one/go/blog_be499f28-b1ac-48da-b0fa-13a21c12d173')}> <HiOutlineFire style={{ height: 22, width: 22, marginRight: 4 }} /> UI&nbsp;Designer </button>
-                            <button className={style.badge} title='https://waya.one/go/github' onClick={() => window.open('https://waya.one/go/github')}> <HiOutlineCode style={{ height: 22, width: 22, marginRight: 4 }} /> Developer </button>
+                            <button className={`${style.badge} ${light ? style.badge_light : ''}`} title='https://waya.one/go/blog_be499f28-b1ac-48da-b0fa-13a21c12d173' onClick={() => window.open('https://waya.one/go/blog_be499f28-b1ac-48da-b0fa-13a21c12d173')}> <HiOutlineFire style={{ height: 22, width: 22, marginRight: 4 }} /> UI&nbsp;Designer </button>
+                            <button className={`${style.badge} ${light ? style.badge_light : ''}`} title='https://waya.one/go/github' onClick={() => window.open('https://waya.one/go/github')}> <HiOutlineCode style={{ height: 22, width: 22, marginRight: 4 }} /> Developer </button>
                         </div>
                     </div>
                     <div className={style.content}>
-                        <div className={style.readme}>
+                        <div className={`${style.readme} ${light ? style.readme_light : ''}`}>
                             <strong style={{ fontSize: 27 }}>👋 About me</strong> <br />
                             <div style={{ marginTop: 8, marginLeft: 12, display: 'block' }}>
                                 I'm <strong>Luna</strong>, born at <strong>17th of April</strong> and currently live in <strong>Austria</strong> near Vienna.. I'm some hobby <strong>Software Engineer</strong> and <strong>LGBTQ+ Activist</strong>.
@@ -74,7 +75,7 @@ export default function Homepage({ user, cards, error }) {
                         </div>
                         <div className={user?.activities.length > 0 ? style.section : ''}>
                             {user?.activities.map((activity) => (
-                                <div className={style.readme} style={{ paddingLeft: 14 }} key={activity.applicationId}>
+                                <div className={`${style.readme} ${light ? style.readme_light : ''}`} style={{ paddingLeft: 14 }} key={activity.applicationId}>
                                     <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{activity.name}</strong><text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {activity.name.toLowerCase().includes(`music`) ? 'Listening' : (activity.name.toLowerCase().includes(`youtube`) ? 'Watching' : (activity.name.toLowerCase().includes(`code`) ? 'Developing' : (activity.name.toLowerCase().includes(`github`) ? 'Browsing' : 'Playing')))}</text>
                                     <div style={{ display: 'flex' }}>
                                         <div style={{ position: 'relative', marginTop: 6 }}>
@@ -103,8 +104,8 @@ export default function Homepage({ user, cards, error }) {
                         </div>
                         <div className={cards?.length > 0 ? style.section : ''} style={{ marginBottom: width > 540 ? 20 : 60 }}>
                             {cards?.map((card) => (
-                                <div className={style.readme} style={{ paddingLeft: 14 }} key={card.name}>
-                                    <strong style={{ fontSize: 24, color: '#ddd9e6' }}>{card.name}</strong>
+                                <div className={`${style.readme} ${light ? style.readme_light : ''}`} style={{ paddingLeft: 14 }} key={card.name}>
+                                    <strong style={{ fontSize: 24, color: light ? 'rgb(87, 92, 99)' : '#ddd9e6' }}>{card.name}</strong>
                                     {card?.bot > 0 ?
                                         <badge style={{ backgroundColor: `#5865f2`, fontWeight: 600, fontFamily: 'Open Sans, sans-serif', fontSize: 13, padding: 2, paddingRight: 6, paddingLeft: (card?.bot > 1 ? 19 : 6), borderRadius: 4, color: '#fff', position: 'relative', marginLeft: 4 }}>
                                             {card?.bot > 1 ? <svg style={{ position: 'absolute', top: 4, left: 2.5 }}>

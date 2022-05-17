@@ -5,6 +5,10 @@
     margin: auto;
     animation: fadein 2000ms;
     overflow-x: hidden;
+    transition-duration: 200ms;
+}
+.align_light {
+    background-color: rgb(255, 255, 255)!important;
 }
 
 @keyframes fadein {
@@ -26,6 +30,11 @@
     background-color: rgb(30, 26, 34);
     width: 49.4rem;
     box-shadow: rgb(27, 24, 31, 0.6) 0px 4px 12px;
+    transition-duration: 200ms;
+}
+.container_light {
+    background-color: rgb(223, 225, 227);
+    box-shadow: rgb(27, 24, 31, 0.2) 0px 4px 12px;
 }
 
 .banner {
@@ -60,7 +69,7 @@
 .me {
     position: relative;
     z-index: 3;
-    margin-top: 5rem;
+    margin-top: 4.6rem;
     display: flex;
 }
 
@@ -91,9 +100,13 @@
     display: flex;
     font-size: 1.2rem;
     max-height: 1.9rem;
-    transition-duration: 500ms;
     position: relative;
-    bottom: 0rem
+    bottom: 0rem;
+    transition-duration: 200ms;
+}
+.badge_light {
+    background-color: rgb(191, 195, 201);
+    color: rgb(87, 92, 99)
 }
 
 .badge:hover {
@@ -134,12 +147,17 @@
 .readme {
     position: relative;
     user-select: text;
-    background-color: rgb(36, 32, 41, 0.4);
+    background-color: rgba(36, 32, 41, 0.4);
     padding: 0.8rem 0.8rem 0.8rem 0.4rem;
     border-radius: 0.2rem;
     font-size: 1.09rem;
     font-family: 'Rubik', sans-serif;
     margin-bottom: 1rem;
+    transition-duration: 200ms;
+}
+.readme_light {
+    background-color: rgba(201, 206, 211, 0.3);
+    color: rgb(87, 92, 99);
 }
 
 .section {
