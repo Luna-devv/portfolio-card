@@ -122,7 +122,7 @@ export default function Homepage({ user, cards, error, light }) {
                                     </div>
                                     <button style={{ marginTop: 4, display: 'flex', color: 'currentColor', cursor: 'pointer' }} onClick={() => window.open(card.url)}>
                                         <HiOutlineLink style={{ minHeight: 21, minWidth: 21 }} />
-                                        <div className='link' style={{ marginTop: 2, fontSize: '1.1rem', position: 'relative', bottom: 3 }}>&nbsp;{card.url.replace(/https:\/\//, ``)}</div>
+                                        <div className='link' style={{ marginTop: 2, fontSize: '1.1rem', position: 'relative', bottom: 3 }}>&nbsp;{card.url.replace(/https?:\/\//g, ``).split('?')?.[0]}</div>
                                     </button>
                                     <img src={card.icon} className={style.icon} draggable={false} alt={`${card.name}'s icon`} />
                                 </div>

@@ -31,23 +31,22 @@ module.exports = {
         position: `Founder, Developer`,
         bot: 2
     }, {
-        //     name: 'Pronouns',
-        //     icon: 'https://cdn.waya.one/r/pronouns.png',
-        //     description: 'A Simple way to add your Pronouns and Sexualities in Discord.',
-        //     url: 'https://prns.waya.one',
-        //     position: `Founder, Developer`,
-        //     bot: 2
-        // }, {
+        name: 'Discordlist.gg',
+        icon: 'https://cdn.discordapp.com/icons/724571620676599838/37192e8b0c8981cbfd8b172a9693cc19.webp?size=2048',
+        description: 'Find the best bots and servers to upgrade your Discord experience.',
+        url: 'https://discordlist.gg?utm_source=lunish.gay',
+        position: `Beta Contributor`
+    }, {
         name: 'discord-botlist.eu',
         icon: 'https://cdn.discord-botlist.eu/pictures/logo.png',
         description: 'We give you the ability to apply and give your bot a page on our site.',
-        url: 'https://discord-botlist.eu',
+        url: 'https://discord-botlist.eu?utm_source=lunish.gay',
         position: `Moderator`
     }, {
         name: 'Tixte',
         icon: 'https://tixte.com/static/media/logo_mark.d3b45ae2.png',
         description: 'The fast, free and easy way to upload and store your files in the cloud.',
-        url: 'https://discord.gg/vWcEAX5G4B',
+        url: 'https://discord.gg/vWcEAX5G4B?utm_source=lunish.gay',
         position: `Moderator`
     }],
     header: {
@@ -95,7 +94,17 @@ module.exports = {
             'discord bot',
             'discord bots',
             'discord',
-            'botlist'
+            'botlist',
+            'dlist.gg',
+            'dlist.js',
+            'dlistjs',
+            'dlist',
+            'dlist api',
+            'discordlist.gg',
+            'discordlist.js',
+            'discordlistjs',
+            'discordlist',
+            'discordlist api'
         ],
     }
 }
