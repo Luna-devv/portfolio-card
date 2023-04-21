@@ -41,6 +41,8 @@ export default function Homepage({ user, cards, error, light }) {
                     </div>
                     <div className={style.content}>
                         <div className={`${style.readme} ${light ? style.readme_light : ''}`}>
+                            {/* -- Start editing your bio bellow -- */}
+
                             <strong style={{ fontSize: 27 }}>👋 About me</strong> <br />
                             <div style={{ marginTop: 8, marginLeft: 12, display: 'block' }}>
                                 I'm <strong>Luna</strong>, born at <strong>17th of April</strong> and currently live in <strong>Austria</strong> near Vienna.. I'm some hobby <strong>Software Engineer</strong> and <strong>LGBTQ+ Activist</strong>.
@@ -72,6 +74,8 @@ export default function Homepage({ user, cards, error, light }) {
                                 You want to collaborate with me or just want to have a nice talk in with my community? <br />
                                 Feel free to join my <button className='link' style={{ fontSize: '1.1rem' }} onClick={() => window.open('https://waya.one/go/discord')}>Discord server</button> and shoot a ping at me!
                             </div>
+
+                            {/* -- Start editing your bio above -- */}
                         </div>
                         <div className={user?.activities.length > 0 ? style.section : ''}>
                             {user?.activities.map((activity) => (
@@ -116,7 +120,7 @@ export default function Homepage({ user, cards, error, light }) {
                                         : <></>
                                     }
                                     {card.position ? <text style={{ color: 'rgb(99, 90, 112)' }}> ⌋ {card.position}</text> : <></>}
-                                    <div style={{ marginTop: 4, display: 'flex' }}>
+                                    <div style={{ marginTop: 4, display: 'flex', marginRight: '4.8rem', wordBreak: 'break-word' }}>
                                         <HiOutlineNewspaper style={{ minHeight: 22, minWidth: 22 }} />
                                         <div style={{ marginTop: 2 }}>&nbsp;{card.description}</div>
                                     </div>

@@ -7,8 +7,9 @@
     overflow-x: hidden;
     transition-duration: 200ms;
 }
+
 .align_light {
-    background-color: rgb(255, 255, 255)!important;
+    background-color: rgb(255, 255, 255) !important;
 }
 
 @keyframes fadein {
@@ -32,6 +33,7 @@
     box-shadow: rgb(27, 24, 31, 0.6) 0px 4px 12px;
     transition-duration: 200ms;
 }
+
 .container_light {
     background-color: rgb(223, 225, 227);
     box-shadow: rgb(27, 24, 31, 0.2) 0px 4px 12px;
@@ -104,6 +106,7 @@
     bottom: 0rem;
     transition-duration: 200ms;
 }
+
 .badge_light {
     background-color: rgb(191, 195, 201);
     color: rgb(87, 92, 99)
@@ -155,6 +158,7 @@
     margin-bottom: 1rem;
     transition-duration: 200ms;
 }
+
 .readme_light {
     background-color: rgba(201, 206, 211, 0.3);
     color: rgb(87, 92, 99);
@@ -167,6 +171,7 @@
 .icon {
     position: absolute;
     height: 5rem;
+    width: 5rem;
     right: -0.4rem;
     top: -0.4rem;
     border-radius: 0.4rem;
