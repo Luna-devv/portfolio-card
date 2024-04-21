@@ -162,7 +162,8 @@ header: {
 
 ## 5. Meta tags
 Last but not least the meta tags. This are important if other websites like Discord, Twitter or Slack should show informations about your website, in the picture bellow you can see an example how it could look like in Discord.
-<img src='https://cdn.waya.one/r/1645794994.png' style='border-radius: 0.4rem; max-height: 8rem;' /> <br />
+<br />
+![discord embed](https://cdn.waya.one/r/1645794994.png)
 
 However, open the [`config.js`](https://github.com/Luna-devv/luna-site/blob/main/config.js#L66) for the last time and edit the `metadata` object.
 Please note that the `keywords` value needs to be an [Array](https://www.w3schools.com/js/js_arrays.asp) and the `color` value a valid [hex color](https://htmlcolorcodes.com/color-picker/)! <br />
